@@ -1,7 +1,7 @@
 # code_recruiter
 
 ## Homepage
-![alt](https://i.gyazo.com/fff8bd9b6cf0230f14f92b68aacb1181.png)
+![alt](https://i.gyazo.com/ddae90b79408fcd7061b70a5dff20102.png)
 
 ## Trainings page
 ![alt](https://i.gyazo.com/136815280afb6351b85662aabfb0755b.png)
