@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-import MobileHeader from '../../MobileHeader';
-import DesktopHeader from '../../DesktopHeader';
-import AdBanner from '../../AdBanner';
+import MobileHeader from '../../../MobileHeader';
+import DesktopHeader from '../../../DesktopHeader';
+import AdBanner from '../../../AdBanner';
 import MiddleColumn from './MiddleColumn';
 
-import { Container } from '../styles';
+import { Container } from '../../styles';
 
 const LayoutApply: React.FC = () => {
   const [isLoading, setLoading] = useState(true);

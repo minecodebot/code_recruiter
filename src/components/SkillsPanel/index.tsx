@@ -5,14 +5,14 @@ import Panel from '../Panel'
 import { Container } from './styles';
 
 export interface Props {
-	tags: [[string, boolean]];
+	tags: (string | boolean)[][];
   }
 
 const SkillsPanel: React.FC<Props> = ({ tags }) => {
   return (
     <Container>
       <Panel>
-        <span className="title">My skills</span>
+        <span className="title">Skills</span>
         {tags.map((item) => (
            <HashtagItem tag={item} />
         ))}

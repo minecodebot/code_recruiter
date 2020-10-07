@@ -1,12 +1,13 @@
 import React from 'react';
 import { useRouter } from 'next/router'
 
-import LoadingProfilePanel from '../../../Shimmer/LoadingProfilePanel';
-import ProfilePanel from '../../../ProfilePanel';
-import SkillsPanel from '../../../SkillsPanel';
-import TrainingPanel from '../../../TrainingPanel';
+import LoadingProfilePanel from '../../../../Shimmer/LoadingProfilePanel';
+import ProfilePanel from '../../../../ProfilePanel';
+import SkillsPanel from '../../../../SkillsPanel';
+import TrainingPanel from '../../../../TrainingPanel';
+import CompletedTrainingPanel from '../../../../CompletedTrainingPanel';
 import { Container, LikeIcon, Row } from './styles';
-import LoadingTrainingPanel from '../../../Shimmer/LoadingTrainingPanel';
+import LoadingTrainingPanel from '../../../../Shimmer/LoadingTrainingPanel';
 
 const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
   const router = useRouter()
@@ -16,14 +17,18 @@ const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
       {isLoading ? (<>
         <LoadingProfilePanel />
 		<LoadingTrainingPanel />
+		<LoadingTrainingPanel />
+		<LoadingTrainingPanel />
 	  </>) : (
         <Row className='actions'>
+		  <button onClick={()=>{router.push('/profile/edit')}}>
+            <LikeIcon />
+            <span>Edit Profile</span>
+          </button>
           <ProfilePanel />
           <SkillsPanel tags={competences}/>
-		  <button onClick={()=>{router.push('/profile/me')}}>
-            <LikeIcon />
-            <span>Save</span>
-          </button>
+		  <CompletedTrainingPanel />
+          <TrainingPanel />
         </Row>
       )}
     </Container>

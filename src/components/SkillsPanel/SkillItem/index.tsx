@@ -3,7 +3,7 @@ import React from 'react';
 import { HashtagIcon, HashtagIconCertified } from './styles';
 
 export interface Props {
-	tag: [string, boolean];
+	tag: (string | boolean)[];
 }
 
 const SkillItem: React.FC<Props> = ({ tag }) => {

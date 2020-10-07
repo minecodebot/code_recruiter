@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { GrLinkedin } from 'react-icons/gr';
 import { AiFillHome, AiOutlineBell } from 'react-icons/ai';
 import {
-	FcPositiveDynamic, FcSignature
+	FcPositiveDynamic, FcSignature, FcPlus
 } from 'react-icons/fc';
 
 export const Container = styled.div`
@@ -124,5 +124,17 @@ export const TrainingIcon = styled(FcPositiveDynamic)`
 `;
 
 export const ExamIcon = styled(FcSignature)`
+  ${iconCSS}
+`;
+
+export const AddJob = styled(FcPlus)`
+  ${iconCSS}
+`;
+
+export const AddExam = styled(FcSignature)`
+  ${iconCSS}
+`;
+
+export const AddTraining = styled(FcPositiveDynamic)`
   ${iconCSS}
 `;

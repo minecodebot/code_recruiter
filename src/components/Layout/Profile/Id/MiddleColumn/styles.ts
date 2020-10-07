@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { FaUserEdit } from 'react-icons/fa'
+import { FcSupport } from 'react-icons/fc'
 
 export const Container = styled.div`
   @media (min-width: 1180px) {
@@ -64,6 +64,6 @@ const iconCSS = css`
   margin-right: 4px;
 `;
 
-export const LikeIcon = styled(FaUserEdit)`
+export const LikeIcon = styled(FcSupport)`
   ${iconCSS}
 `;

@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { FcPlus, FcPositiveDynamic, FcSignature, FcApproval, FcMinus } from 'react-icons/fc'
+import { FcPlus, FcPositiveDynamic, FcSignature, FcApproval, FcMinus, FcSupport, FcTodoList } from 'react-icons/fc'
 
 export const Container = styled.div`
   margin-top: 8px;
@@ -156,6 +156,18 @@ export const CommentIcon = styled(FcPositiveDynamic)`
 `;
 
 export const ApplyIcon = styled(FcSignature)`
+  ${iconCSS}
+`;
+
+export const AddExam = styled(FcPlus)`
+  ${iconCSS}
+`;
+
+export const EditIcon = styled(FcSupport)`
+  ${iconCSS}
+`;
+
+export const ResponsesIcon = styled(FcTodoList)`
   ${iconCSS}
 `;
 

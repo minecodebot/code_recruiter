@@ -7,7 +7,10 @@ import {
   LinkedInIcon,
   ProfileCircle,
   TrainingIcon,
-  ExamIcon
+  ExamIcon,
+  AddJob,
+  AddExam,
+  AddTraining
 } from './styles';
 
 const Header: React.FC = () => {
@@ -22,6 +25,27 @@ const Header: React.FC = () => {
 
         <div className="right">
           <nav>
+
+		{router.pathname.includes('/admin') ? <>
+			<button onClick={()=>{router.push('/add/job')}}>
+              <AddExam />
+              <span>
+                Add Exam
+              </span>
+            </button>
+			<button onClick={()=>{router.push('/add/job')}}>
+              <AddTraining />
+              <span>
+                Add Training
+              </span>
+            </button>
+			<button onClick={()=>{router.push('/add/job')}}>
+              <AddJob />
+              <span>
+                Add Job Opportunity
+              </span>
+            </button></>:
+		<>
 		  <button onClick={()=>{router.push('/trainings')}}>
               <TrainingIcon />
               <span>
@@ -42,6 +66,8 @@ const Header: React.FC = () => {
                 Me
               </span>
             </button>
+		</>
+		}
           </nav>
         </div>
       </Wrapper>
