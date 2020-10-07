@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import Panel from '../Panel';
 import { useRouter } from 'next/router'
@@ -11,16 +11,14 @@ import {
   Column,
   LikeIcon,
   CommentIcon,
-  ApplyIcon
+  ApplyIcon,
+  HashtagIconCertified,
+  LikeIconLess
 } from './styles';
 
-export interface Props {
-	fullOpportunity?: boolean
-}
-
-const FeedOpportunity: React.FC<Props> = ({ fullOpportunity }) => {
+const FeedOpportunity: React.FC = () => {
   const router = useRouter()
-
+  const [fullOpportunity, setFullOpportunity] = useState(false)
   return (
     <Panel>
       <Container>
@@ -34,7 +32,7 @@ const FeedOpportunity: React.FC<Props> = ({ fullOpportunity }) => {
         </Row>
         <Row className="description">
           <Column>
-		  	{ fullOpportunity ? <><h4>Description</h4><p>Nam condimentum commodo ligula, imperdiet auctor justo ultrices sed. Aenean nec nisi vestibulum turpis pulvinar lobortis quis at magna.</p><p>Nam condimentum commodo ligula, imperdiet auctor justo ultrices sed. Aenean nec nisi vestibulum turpis pulvinar lobortis quis at magna.</p><p>Nam condimentum commodo ligula, imperdiet auctor justo ultrices sed. Aenean nec nisi vestibulum turpis pulvinar lobortis quis at magna.</p></> : <><h4>Short Description</h4><p>Nam condimentum commodo ligula, imperdiet auctor justo ultrices sed. Aenean nec nisi vestibulum turpis pulvinar lobortis quis at magna.</p></>}
+		  	{ fullOpportunity ? <><span className="title">Description</span><p>Nam condimentum commodo ligula, imperdiet auctor justo ultrices sed. Aenean nec nisi vestibulum turpis pulvinar lobortis quis at magna.</p><p>Nam condimentum commodo ligula, imperdiet auctor justo ultrices sed. Aenean nec nisi vestibulum turpis pulvinar lobortis quis at magna.</p><p>Nam condimentum commodo ligula, imperdiet auctor justo ultrices sed. Aenean nec nisi vestibulum turpis pulvinar lobortis quis at magna.</p><div className="separator"></div><Row><Column><p className="tag"><span><HashtagIconCertified />Competence 1{' '}</span></p><p className="tag"><span><HashtagIconCertified />Competence 2{' '}</span></p><p className="tag"><span><HashtagIconCertified />Competence 3{' '}</span></p><p className="tag"><span><HashtagIconCertified />Competence 4{' '}</span></p></Column></Row></> : <><span className="title">Short Description</span><p>Nam condimentum commodo ligula, imperdiet auctor justo ultrices sed. Aenean nec nisi vestibulum turpis pulvinar lobortis quis at magna.</p></>}
           </Column>
         </Row>
 
@@ -44,7 +42,14 @@ const FeedOpportunity: React.FC<Props> = ({ fullOpportunity }) => {
 
         <Row className="actions">
 			{ fullOpportunity ?
-			<>
+			<div className="buttons">
+				<div className="left">
+				<button onClick={()=>{setFullOpportunity(!fullOpportunity)}}>
+					<LikeIconLess />
+					<span>View less</span>
+				</button>
+				</div>
+				<div className="right">
 				<button onClick={()=>{router.push('/')}}>
 					<ApplyIcon />
 					<span>Apply</span>
@@ -53,16 +58,25 @@ const FeedOpportunity: React.FC<Props> = ({ fullOpportunity }) => {
 					<CommentIcon />
 					<span>Training</span>
 				</button>
-		  	</> : <>
-				<button onClick={()=>{router.push('/opportunity/1')}}>
+				</div>
+		  	</div> : <div className="buttons">
+				<div className="left">
+				<button onClick={()=>{setFullOpportunity(!fullOpportunity)}}>
 					<LikeIcon />
 					<span>View more</span>
+				</button>
+				</div>
+				<div className="right">
+				<button onClick={()=>{router.push('/')}}>
+					<ApplyIcon />
+					<span>Apply</span>
 				</button>
 				<button onClick={()=>{router.push('/training/code')}}>
 					<CommentIcon />
 					<span>Training</span>
 				</button>
-			</> }
+				</div>
+			</div> }
         </Row>
       </Container>
     </Panel>

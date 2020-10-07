@@ -1,7 +1,7 @@
 import React from 'react';
 
-import LoadingFeedPost from '../../../Shimmer/LoadingFeedPost';
-import FeedPost from '../../../FeedOpportunity';
+import LoadingFeedOpportunity from '../../../Shimmer/LoadingFeedOpportunity';
+import FeedOpportunity from '../../../FeedOpportunity';
 
 import { Container } from './styles';
 
@@ -10,23 +10,23 @@ const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
     <Container className="middle-column">
       {isLoading ? (
         <>
-          <LoadingFeedPost />
-          <LoadingFeedPost />
-          <LoadingFeedPost />
-          <LoadingFeedPost />
+          <LoadingFeedOpportunity />
+          <LoadingFeedOpportunity />
+          <LoadingFeedOpportunity />
+          <LoadingFeedOpportunity />
         </>
       ) : (
         <>
-          <FeedPost />
-          <FeedPost />
-          <FeedPost />
-          <FeedPost />
-          <FeedPost />
-          <FeedPost />
-          <FeedPost />
-          <FeedPost />
-          <FeedPost />
-          <FeedPost />
+          <FeedOpportunity />
+          <FeedOpportunity />
+          <FeedOpportunity />
+          <FeedOpportunity />
+          <FeedOpportunity />
+          <FeedOpportunity />
+          <FeedOpportunity />
+          <FeedOpportunity />
+          <FeedOpportunity />
+          <FeedOpportunity />
         </>
       )}
     </Container>

@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 
 import LoadingProfilePanel from '../../../Shimmer/LoadingProfilePanel';
 import ProfilePanel from '../../../ProfilePanel';
-import HashtagPanel from '../../../SkillsPanel';
+import SkillsPanel from '../../../SkillsPanel';
 import TrainingPanel from '../../../TrainingPanel';
 import { Container, LikeIcon, Row } from './styles';
 
@@ -17,7 +17,7 @@ const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
       ) : (
         <Row className='actions'>
           <ProfilePanel />
-          <HashtagPanel tags={competences}/>
+          <SkillsPanel tags={competences}/>
 		  <button onClick={()=>{router.push('/profile/me')}}>
             <LikeIcon />
             <span>Save</span>

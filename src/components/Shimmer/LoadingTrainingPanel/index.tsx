@@ -5,24 +5,25 @@ import Skeleton from '../../Skeleton';
 
 import { Container } from './styles';
 
-const LoadingFeedPost: React.FC = () => {
+const LoadingTrainingPanel: React.FC = () => {
   return (
     <Container>
       <Panel className="no-shadow">
         <header>
-          <Skeleton className="avatar-skeleton" />
           <div className="column">
             <Skeleton className="row-skeleton" />
             <Skeleton className="row-skeleton" />
           </div>
         </header>
-        <span>
-          <Skeleton className="row-skeleton" />
-          <Skeleton className="row-skeleton" />
-        </span>
+        <header>
+          <div className="column">
+            <Skeleton className="row-skeleton" />
+            <Skeleton className="row-skeleton" />
+          </div>
+        </header>
       </Panel>
     </Container>
   );
 };
 
-export default LoadingFeedPost;
+export default LoadingTrainingPanel;

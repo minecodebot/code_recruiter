@@ -6,7 +6,8 @@ import {
   Wrapper,
   LinkedInIcon,
   ProfileCircle,
-  CaretDownIcon,
+  TrainingIcon,
+  ExamIcon
 } from './styles';
 
 const Header: React.FC = () => {
@@ -21,10 +22,24 @@ const Header: React.FC = () => {
 
         <div className="right">
           <nav>
-		  <button onClick={()=>{router.push('/profile/me')}}>
-              <ProfileCircle src="https://github.com/guilhermerodz.png" />
+		  <button onClick={()=>{router.push('/trainings')}}>
+              <TrainingIcon />
               <span>
-                Eu
+                Trainings
+              </span>
+            </button>
+
+			<button onClick={()=>{router.push('/exams')}}>
+              <ExamIcon />
+              <span>
+                My Exams
+              </span>
+            </button>
+
+			<button onClick={()=>{router.push('/profile/me')}}>
+              <ProfileCircle src="https://icon-library.com/images/default-profile-icon/default-profile-icon-16.jpg" />
+              <span>
+                Me
               </span>
             </button>
           </nav>

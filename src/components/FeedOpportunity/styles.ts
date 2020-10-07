@@ -1,11 +1,22 @@
 import styled, { css } from 'styled-components';
-import { FcPlus, FcPositiveDynamic, FcSignature } from 'react-icons/fc'
+import { FcPlus, FcPositiveDynamic, FcSignature, FcApproval, FcMinus } from 'react-icons/fc'
 
 export const Container = styled.div`
   margin-top: 8px;
   margin-bottom: 12px;
+  .separator {
+    width: 100%;
+    border-bottom: 1px solid var(--color-separator);
+    margin: 16px 0 12px;
+  }
 
 
+  .title {
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--color-light);
+	margin-bottom: 10px;
+  }
 `;
 
 export const Row = styled.div`
@@ -14,6 +25,18 @@ export const Row = styled.div`
 
   &.description {
     padding: 12px 0 8px;
+  }
+
+  .buttons {
+	  display: flex;
+	  justify-content: space-between;
+	  width: 100%;
+  }
+
+  .left,
+  .right {
+	display: flex;
+    align-items: center;
   }
 
   &.heading {
@@ -124,10 +147,21 @@ export const LikeIcon = styled(FcPlus)`
   ${iconCSS}
 `;
 
+export const LikeIconLess = styled(FcMinus)`
+  ${iconCSS}
+`;
+
 export const CommentIcon = styled(FcPositiveDynamic)`
   ${iconCSS}
 `;
 
 export const ApplyIcon = styled(FcSignature)`
   ${iconCSS}
+`;
+
+export const HashtagIconCertified = styled(FcApproval)`
+  width: 16px;
+  height: 16px;
+  color: var(--color-hashtag);
+  margin-right: 8px;
 `;

@@ -1,6 +1,9 @@
 import styled, { css } from 'styled-components';
 import { GrLinkedin } from 'react-icons/gr';
-import { AiFillHome, AiOutlineBell, AiFillCaretDown } from 'react-icons/ai';
+import { AiFillHome, AiOutlineBell } from 'react-icons/ai';
+import {
+	FcPositiveDynamic, FcSignature
+} from 'react-icons/fc';
 
 export const Container = styled.div`
   background: var(--color-header);
@@ -110,7 +113,16 @@ export const ProfileCircle = styled.img`
   border: 1px solid var(--color-icons);
 `;
 
-export const CaretDownIcon = styled(AiFillCaretDown)`
-  width: 16px;
-  height: 16px;
+const iconCSS = css`
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+`;
+
+export const TrainingIcon = styled(FcPositiveDynamic)`
+  ${iconCSS}
+`;
+
+export const ExamIcon = styled(FcSignature)`
+  ${iconCSS}
 `;
