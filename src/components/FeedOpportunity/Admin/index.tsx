@@ -67,7 +67,7 @@ const FeedOpportunity: React.FC = () => {
 				</button>
 				</div>
 				<div className="left">
-				<button onClick={()=>{router.push('/')}}>
+				<button onClick={()=>{router.push('/admin/responses/job/1')}}>
 					<ResponsesIcon />
 					<span>Responses</span>
 				</button>

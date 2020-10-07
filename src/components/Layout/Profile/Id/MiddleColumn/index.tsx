@@ -4,7 +4,6 @@ import { useRouter } from 'next/router'
 import LoadingProfilePanel from '../../../../Shimmer/LoadingProfilePanel';
 import ProfilePanel from '../../../../ProfilePanel';
 import SkillsPanel from '../../../../SkillsPanel';
-import TrainingPanel from '../../../../TrainingPanel';
 import CompletedTrainingPanel from '../../../../CompletedTrainingPanel';
 import { Container, LikeIcon, Row } from './styles';
 import LoadingTrainingPanel from '../../../../Shimmer/LoadingTrainingPanel';
@@ -18,13 +17,11 @@ const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
         <LoadingProfilePanel />
 		<LoadingTrainingPanel />
 		<LoadingTrainingPanel />
-		<LoadingTrainingPanel />
 	  </>) : (
         <Row className='actions'>
           <ProfilePanel />
           <SkillsPanel tags={competences}/>
 		  <CompletedTrainingPanel />
-          <TrainingPanel />
         </Row>
       )}
     </Container>
