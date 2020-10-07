@@ -1,9 +1,9 @@
 import React from 'react'
-import Layout from '../components/Layout/Home';
+import LayoutApply from '../../components/Layout/Opportunity';
 
 const Home: React.FC = () => {
 	return (
-		<Layout />
+		<LayoutApply />
 	)
 }
 

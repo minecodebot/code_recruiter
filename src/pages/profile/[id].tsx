@@ -1,9 +1,9 @@
 import React from 'react'
-import Layout from '../components/Layout/Home';
+import LayoutMyProfile from '../../components/Layout/Profile';
 
 const Home: React.FC = () => {
 	return (
-		<Layout />
+		<LayoutMyProfile />
 	)
 }
 
