@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import ExamsPanel from '../../../ExamsPanel';
-import { Container, Row } from './styles';
-import LoadingExamsPanel from '../../../Shimmer/LoadingExamsPanel';
+import ExamsPanel from '../../../ExamsPanel'
+import { Container, Row } from './styles'
+import LoadingExamsPanel from '../../../Shimmer/LoadingExamsPanel'
 
 const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
   return (
@@ -10,12 +10,12 @@ const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
       {isLoading ? (
         <LoadingExamsPanel />
       ) : (
-        <Row className='actions'>
+        <Row className="actions">
           <ExamsPanel />
         </Row>
       )}
     </Container>
-  );
-};
+  )
+}
 
-export default MiddleColumn;
+export default MiddleColumn

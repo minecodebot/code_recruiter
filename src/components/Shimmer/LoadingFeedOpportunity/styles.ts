@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.div`
   margin-top: 8px;
@@ -33,8 +33,8 @@ export const Container = styled.div`
           &:nth-child(1) {
             width: 30%;
           }
-		margin-top: 10px;
-		width: 55%;
+          margin-top: 10px;
+          width: 55%;
         }
       }
     }
@@ -56,4 +56,4 @@ export const Container = styled.div`
       }
     }
   }
-`;
+`

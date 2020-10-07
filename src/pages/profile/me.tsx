@@ -1,10 +1,8 @@
 import React from 'react'
-import LayoutMyProfile from '../../components/Layout/Profile/Me';
+import LayoutMyProfile from '../../components/Layout/Profile/Me'
 
 const Home: React.FC = () => {
-	return (
-		<LayoutMyProfile />
-	)
+  return <LayoutMyProfile />
 }
 
 export default Home

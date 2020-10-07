@@ -1,9 +1,7 @@
-import styled, { css } from 'styled-components';
-import { GrLinkedin } from 'react-icons/gr';
-import { AiFillHome, AiOutlineBell } from 'react-icons/ai';
-import {
-	FcPositiveDynamic, FcSignature, FcPlus
-} from 'react-icons/fc';
+import styled, { css } from 'styled-components'
+import { GrLinkedin } from 'react-icons/gr'
+import { AiFillHome, AiOutlineBell } from 'react-icons/ai'
+import { FcPositiveDynamic, FcSignature, FcPlus } from 'react-icons/fc'
 
 export const Container = styled.div`
   background: var(--color-header);
@@ -20,7 +18,7 @@ export const Container = styled.div`
   @media (min-width: 1180px) {
     display: block;
   }
-`;
+`
 
 export const Wrapper = styled.div`
   display: flex;
@@ -64,9 +62,9 @@ export const Wrapper = styled.div`
   }
 
   .homeIcon {
-	  cursor: pointer;
+    cursor: pointer;
   }
-`;
+`
 
 export const LinkedInIcon = styled(GrLinkedin)`
   height: 34px;
@@ -75,7 +73,7 @@ export const LinkedInIcon = styled(GrLinkedin)`
   background-color: var(--color-header);
   border-radius: 4px;
   flex-shrink: 0;
-`;
+`
 
 export const SearchInput = styled.input`
   margin-left: 12px;
@@ -91,50 +89,50 @@ export const SearchInput = styled.input`
   &:focus {
     background: var(--color-dark);
   }
-`;
+`
 
 const generalIconCSS = css`
   width: 24px;
   height: 24px;
-`;
+`
 
 export const HomeIcon = styled(AiFillHome)`
   ${generalIconCSS}
-`;
+`
 
 export const NotificationsIcon = styled(AiOutlineBell)`
   ${generalIconCSS}
-`;
+`
 
 export const ProfileCircle = styled.img`
   width: 24px;
   height: 24px;
   border-radius: 50%;
   border: 1px solid var(--color-icons);
-`;
+`
 
 const iconCSS = css`
   width: 24px;
   height: 24px;
   margin-right: 4px;
-`;
+`
 
 export const TrainingIcon = styled(FcPositiveDynamic)`
   ${iconCSS}
-`;
+`
 
 export const ExamIcon = styled(FcSignature)`
   ${iconCSS}
-`;
+`
 
 export const AddJob = styled(FcPlus)`
   ${iconCSS}
-`;
+`
 
 export const AddExam = styled(FcSignature)`
   ${iconCSS}
-`;
+`
 
 export const AddTraining = styled(FcPositiveDynamic)`
   ${iconCSS}
-`;
+`

@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 
-import MobileHeader from '../../MobileHeader';
-import DesktopHeader from '../../DesktopHeader';
-import AdBanner from '../../AdBanner';
-import LeftColumn from './LeftColumn';
-import MiddleColumn from './MiddleColumn';
+import MobileHeader from '../../MobileHeader'
+import DesktopHeader from '../../DesktopHeader'
+import AdBanner from '../../AdBanner'
+import LeftColumn from './LeftColumn'
+import MiddleColumn from './MiddleColumn'
 
-import { Container } from '../styles';
+import { Container } from '../styles'
 
 const Layout: React.FC = () => {
-  const [isLoading, setLoading] = useState(true);
+  const [isLoading, setLoading] = useState(true)
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-  }, []);
+      setLoading(false)
+    }, 1000)
+  }, [])
 
   return (
     <Container>
@@ -29,7 +29,7 @@ const Layout: React.FC = () => {
         <LeftColumn isLoading={isLoading} />
       </main>
     </Container>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

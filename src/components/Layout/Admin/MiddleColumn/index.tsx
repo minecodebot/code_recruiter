@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import LoadingFeedOpportunity from '../../../Shimmer/LoadingFeedOpportunity';
-import FeedOpportunity from '../../../FeedOpportunity/Admin';
+import LoadingFeedOpportunity from '../../../Shimmer/LoadingFeedOpportunity'
+import FeedOpportunity from '../../../FeedOpportunity/Admin'
 
-import { Container, Grid } from './styles';
+import { Container, Grid } from './styles'
 
 const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
   return (
@@ -30,7 +30,7 @@ const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
         </Grid>
       )}
     </Container>
-  );
-};
+  )
+}
 
-export default MiddleColumn;
+export default MiddleColumn

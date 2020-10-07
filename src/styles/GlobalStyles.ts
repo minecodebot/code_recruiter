@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`
   * {
@@ -31,4 +31,4 @@ export default createGlobalStyle`
     --color-panel: #fff;
     --color-ad-text: #f7fff7;
   }
-`;
+`

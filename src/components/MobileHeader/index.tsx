@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import { Container, ProfileCircle, SearchInput, MessageIcon } from './styles';
+import { Container, ProfileCircle, SearchInput, MessageIcon } from './styles'
 
 const MobileHeader: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const MobileHeader: React.FC = () => {
       <SearchInput placeholder="Pesquisar" />
       <MessageIcon />
     </Container>
-  );
-};
+  )
+}
 
-export default MobileHeader;
+export default MobileHeader

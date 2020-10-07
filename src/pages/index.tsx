@@ -1,10 +1,8 @@
 import React from 'react'
-import Layout from '../components/Layout/Home';
+import Layout from '../components/Layout/Home'
 
 const Home: React.FC = () => {
-	return (
-		<Layout />
-	)
+  return <Layout />
 }
 
 export default Home

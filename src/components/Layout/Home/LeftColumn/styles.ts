@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.div`
   width: 300px;
-  height:100vh;
-  
+  height: 100vh;
+
   overflow-y: scroll;
 
   ::-webkit-scrollbar {
@@ -12,5 +12,5 @@ export const Container = styled.div`
   -ms-overflow-style: none;
   scrollbar-width: none;
 
-  max-height: calc(100vh - 120px)
-`;
+  max-height: calc(100vh - 120px);
+`

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.div`
   padding-bottom: 12px;
@@ -19,12 +19,12 @@ export const Container = styled.div`
       // color: var(--color-gray);
       display: flex;
       align-items: center;
-	  padding: 3.5px 0;
-	  justify-content: space-between
-	}
+      padding: 3.5px 0;
+      justify-content: space-between;
+    }
 
-	.certified {
-		opacity: 0.5
-	}
+    .certified {
+      opacity: 0.5;
+    }
   }
-`;
+`

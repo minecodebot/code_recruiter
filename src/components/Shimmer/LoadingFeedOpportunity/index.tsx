@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import Panel from '../../Panel';
-import Skeleton from '../../Skeleton';
+import Panel from '../../Panel'
+import Skeleton from '../../Skeleton'
 
-import { Container } from './styles';
+import { Container } from './styles'
 
 const LoadingFeedOpportunity: React.FC = () => {
   return (
@@ -23,7 +23,7 @@ const LoadingFeedOpportunity: React.FC = () => {
         </span>
       </Panel>
     </Container>
-  );
-};
+  )
+}
 
-export default LoadingFeedOpportunity;
+export default LoadingFeedOpportunity

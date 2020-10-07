@@ -1,11 +1,18 @@
-import React from 'react';
+import React from 'react'
 
-import Panel from '../Panel';
+import Panel from '../Panel'
 
-import { Container, SuccessIcon, Row, Column, FailIcon, EvaluationIcon } from './styles';
+import {
+  Container,
+  SuccessIcon,
+  Row,
+  Column,
+  FailIcon,
+  EvaluationIcon
+} from './styles'
 
 const ExamsPanel: React.FC = () => {
-	return (
+  return (
     <Container>
       <Panel>
         <span className="title">My Exams</span>
@@ -13,67 +20,67 @@ const ExamsPanel: React.FC = () => {
           <li>
             <Row className="actions">
               <Column>
-				<h3>Training Title</h3>
+                <h3>Training Title</h3>
                 <span className="subtext">Description</span>
                 <span className="subtext">Date</span>
               </Column>
               <Column>
-			  <Row>
-				<SuccessIcon />
-                <h3>Level</h3>
-			  </Row>
+                <Row>
+                  <SuccessIcon />
+                  <h3>Level</h3>
+                </Row>
               </Column>
             </Row>
           </li>
-		  <li>
+          <li>
             <Row className="actions">
               <Column>
-				<h3>Training Title</h3>
+                <h3>Training Title</h3>
                 <span className="subtext">Description</span>
                 <span className="subtext">Date</span>
               </Column>
               <Column>
-			  <Row>
-				<FailIcon />
-                <h3>Level</h3>
-			  </Row>
+                <Row>
+                  <FailIcon />
+                  <h3>Level</h3>
+                </Row>
               </Column>
             </Row>
           </li>
-		  <li>
+          <li>
             <Row className="actions">
               <Column>
-				<h3>Training Title</h3>
+                <h3>Training Title</h3>
                 <span className="subtext">Description</span>
                 <span className="subtext">Date</span>
               </Column>
               <Column>
-			  <Row>
-				<EvaluationIcon />
-                <h3>Level</h3>
-			  </Row>
+                <Row>
+                  <EvaluationIcon />
+                  <h3>Level</h3>
+                </Row>
               </Column>
             </Row>
           </li>
-		  <li>
+          <li>
             <Row className="actions">
               <Column>
-				<h3>Training Title</h3>
+                <h3>Training Title</h3>
                 <span className="subtext">Description</span>
                 <span className="subtext">Date</span>
               </Column>
               <Column>
-			  <Row>
-				<SuccessIcon />
-                <h3>Level</h3>
-			  </Row>
+                <Row>
+                  <SuccessIcon />
+                  <h3>Level</h3>
+                </Row>
               </Column>
             </Row>
           </li>
         </ul>
       </Panel>
     </Container>
-  );
-};
+  )
+}
 
-export default ExamsPanel;
+export default ExamsPanel

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import { Container } from './styles';
+import { Container } from './styles'
 
 const AdBanner: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const AdBanner: React.FC = () => {
       <span>Rocketseat - </span>
       Interface reproduzida em busca do próximo nível.
     </Container>
-  );
-};
+  )
+}
 
-export default AdBanner;
+export default AdBanner

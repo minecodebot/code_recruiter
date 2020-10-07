@@ -1,5 +1,13 @@
-import styled, { css } from 'styled-components';
-import { FcPlus, FcPositiveDynamic, FcSignature, FcApproval, FcMinus, FcSupport, FcTodoList } from 'react-icons/fc'
+import styled, { css } from 'styled-components'
+import {
+  FcPlus,
+  FcPositiveDynamic,
+  FcSignature,
+  FcApproval,
+  FcMinus,
+  FcSupport,
+  FcTodoList
+} from 'react-icons/fc'
 
 export const Container = styled.div`
   margin-top: 8px;
@@ -10,14 +18,13 @@ export const Container = styled.div`
     margin: 16px 0 12px;
   }
 
-
   .title {
-	font-size: 12px;
-	font-weight: 600;
-	color: var(--color-light);
-	margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-light);
+    margin-bottom: 10px;
   }
-`;
+`
 
 export const Row = styled.div`
   display: flex;
@@ -28,14 +35,14 @@ export const Row = styled.div`
   }
 
   .buttons {
-	  display: flex;
-	  justify-content: space-between;
-	  width: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .left,
   .right {
-	display: flex;
+    display: flex;
     align-items: center;
   }
 
@@ -115,17 +122,17 @@ export const Row = styled.div`
       }
     }
   }
-`;
+`
 
 export const PostImage = styled.img`
   width: 100%;
-`;
+`
 
 export const Separator = styled.div`
   width: 100%;
   height: 1px;
   border-top: 1px solid var(--color-separator);
-`;
+`
 
 export const Avatar = styled.img`
   width: 48px;
@@ -133,47 +140,47 @@ export const Avatar = styled.img`
   border-radius: 50%;
   margin-right: 8px;
   object-fit: cover;
-`;
+`
 
-export const Column = styled.div``;
+export const Column = styled.div``
 
 const iconCSS = css`
   width: 24px;
   height: 24px;
   margin-right: 4px;
-`;
+`
 
 export const LikeIcon = styled(FcPlus)`
   ${iconCSS}
-`;
+`
 
 export const LikeIconLess = styled(FcMinus)`
   ${iconCSS}
-`;
+`
 
 export const CommentIcon = styled(FcPositiveDynamic)`
   ${iconCSS}
-`;
+`
 
 export const ApplyIcon = styled(FcSignature)`
   ${iconCSS}
-`;
+`
 
 export const AddExam = styled(FcPlus)`
   ${iconCSS}
-`;
+`
 
 export const EditIcon = styled(FcSupport)`
   ${iconCSS}
-`;
+`
 
 export const ResponsesIcon = styled(FcTodoList)`
   ${iconCSS}
-`;
+`
 
 export const HashtagIconCertified = styled(FcApproval)`
   width: 16px;
   height: 16px;
   color: var(--color-hashtag);
   margin-right: 8px;
-`;
+`

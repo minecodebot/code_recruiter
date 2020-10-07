@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { FiMessageSquare } from 'react-icons/fi';
+import styled from 'styled-components'
+import { FiMessageSquare } from 'react-icons/fi'
 
 export const Container = styled.div`
   background: var(--color-light);
@@ -19,7 +19,7 @@ export const Container = styled.div`
   @media (min-width: 1180px) {
     display: none;
   }
-`;
+`
 
 export const MessageIcon = styled(FiMessageSquare)`
   height: 24px;
@@ -29,7 +29,7 @@ export const MessageIcon = styled(FiMessageSquare)`
   flex-shrink: 0;
 
   margin-left: 17px;
-`;
+`
 
 export const SearchInput = styled.input`
   margin-left: 16px;
@@ -46,7 +46,7 @@ export const SearchInput = styled.input`
   &:focus {
     background: var(--color-dark);
   }
-`;
+`
 
 export const ProfileCircle = styled.img`
   width: 28px;
@@ -54,4 +54,4 @@ export const ProfileCircle = styled.img`
   border-radius: 50%;
   border: 1px solid var(--color-icons);
   flex-shrink: 0;
-`;
+`

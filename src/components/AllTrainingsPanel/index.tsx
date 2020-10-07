@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-import Panel from '../Panel';
+import Panel from '../Panel'
 import { useRouter } from 'next/router'
 
-import { Container, CommentIcon, Row, Column } from './styles';
+import { Container, CommentIcon, Row, Column } from './styles'
 
 const AllTrainingsPanel: React.FC = () => {
-	const router = useRouter()
-	return (
+  const router = useRouter()
+  return (
     <Container>
       <Panel>
         <span className="title">All Trainings</span>
@@ -19,21 +19,11 @@ const AllTrainingsPanel: React.FC = () => {
                 <span className="subtext">Level</span>
               </Column>
               <Column>
-                <button onClick={()=>{router.push('/training/code')}}>
-                  <CommentIcon />
-                  <span>Training</span>
-                </button>
-              </Column>
-            </Row>
-          </li>
-          <li>
-            <Row className="actions">
-              <Column>
-				<h3>Training Title</h3>
-                <span className="subtext">Level</span>
-              </Column>
-              <Column>
-                <button onClick={()=>{router.push('/training/code')}}>
+                <button
+                  onClick={() => {
+                    router.push('/training/code')
+                  }}
+                >
                   <CommentIcon />
                   <span>Training</span>
                 </button>
@@ -47,7 +37,11 @@ const AllTrainingsPanel: React.FC = () => {
                 <span className="subtext">Level</span>
               </Column>
               <Column>
-			 	<button onClick={()=>{router.push('/training/code')}}>
+                <button
+                  onClick={() => {
+                    router.push('/training/code')
+                  }}
+                >
                   <CommentIcon />
                   <span>Training</span>
                 </button>
@@ -57,81 +51,123 @@ const AllTrainingsPanel: React.FC = () => {
           <li>
             <Row className="actions">
               <Column>
-			    <h3>Training Title</h3>
+                <h3>Training Title</h3>
                 <span className="subtext">Level</span>
               </Column>
               <Column>
-				<button onClick={()=>{router.push('/training/code')}}>
+                <button
+                  onClick={() => {
+                    router.push('/training/code')
+                  }}
+                >
                   <CommentIcon />
                   <span>Training</span>
                 </button>
               </Column>
             </Row>
           </li>
-		  <li>
+          <li>
             <Row className="actions">
               <Column>
-				<h3>Training Title</h3>
+                <h3>Training Title</h3>
                 <span className="subtext">Level</span>
               </Column>
               <Column>
-                <button onClick={()=>{router.push('/training/code')}}>
+                <button
+                  onClick={() => {
+                    router.push('/training/code')
+                  }}
+                >
                   <CommentIcon />
                   <span>Training</span>
                 </button>
               </Column>
             </Row>
           </li>
-		  <li>
+          <li>
             <Row className="actions">
               <Column>
-				<h3>Training Title</h3>
+                <h3>Training Title</h3>
                 <span className="subtext">Level</span>
               </Column>
               <Column>
-                <button onClick={()=>{router.push('/training/code')}}>
+                <button
+                  onClick={() => {
+                    router.push('/training/code')
+                  }}
+                >
                   <CommentIcon />
                   <span>Training</span>
                 </button>
               </Column>
             </Row>
           </li>
-		  <li>
+          <li>
             <Row className="actions">
               <Column>
-				<h3>Training Title</h3>
+                <h3>Training Title</h3>
                 <span className="subtext">Level</span>
               </Column>
               <Column>
-                <button onClick={()=>{router.push('/training/code')}}>
+                <button
+                  onClick={() => {
+                    router.push('/training/code')
+                  }}
+                >
                   <CommentIcon />
                   <span>Training</span>
                 </button>
               </Column>
             </Row>
           </li>
-		  <li>
+          <li>
             <Row className="actions">
               <Column>
-				<h3>Training Title</h3>
+                <h3>Training Title</h3>
                 <span className="subtext">Level</span>
               </Column>
               <Column>
-                <button onClick={()=>{router.push('/training/code')}}>
+                <button
+                  onClick={() => {
+                    router.push('/training/code')
+                  }}
+                >
                   <CommentIcon />
                   <span>Training</span>
                 </button>
               </Column>
             </Row>
           </li>
-		  <li>
+          <li>
             <Row className="actions">
               <Column>
-				<h3>Training Title</h3>
+                <h3>Training Title</h3>
                 <span className="subtext">Level</span>
               </Column>
               <Column>
-                <button onClick={()=>{router.push('/training/code')}}>
+                <button
+                  onClick={() => {
+                    router.push('/training/code')
+                  }}
+                >
+                  <CommentIcon />
+                  <span>Training</span>
+                </button>
+              </Column>
+            </Row>
+          </li>
+          <li>
+            <Row className="actions">
+              <Column>
+                <h3>Training Title</h3>
+                <span className="subtext">Level</span>
+              </Column>
+              <Column>
+                <button
+                  onClick={() => {
+                    router.push('/training/code')
+                  }}
+                >
                   <CommentIcon />
                   <span>Training</span>
                 </button>
@@ -141,7 +177,7 @@ const AllTrainingsPanel: React.FC = () => {
         </ul>
       </Panel>
     </Container>
-  );
-};
+  )
+}
 
-export default AllTrainingsPanel;
+export default AllTrainingsPanel

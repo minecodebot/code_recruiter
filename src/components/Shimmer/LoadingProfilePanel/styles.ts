@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.div`
   margin-top: 8px;
@@ -8,8 +8,8 @@ export const Container = styled.div`
       width: 100%;
       height: 70px;
 
-		filter: brightness(96%);
-		background: var(--color-background)
+      filter: brightness(96%);
+      background: var(--color-background);
     }
     span {
       display: flex;
@@ -38,4 +38,4 @@ export const Container = styled.div`
       }
     }
   }
-`;
+`

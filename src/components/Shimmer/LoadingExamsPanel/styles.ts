@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.div`
   margin-top: 8px;
@@ -20,14 +20,14 @@ export const Container = styled.div`
 
           &:nth-child(1) {
             width: 60%;
-			margin-top: 10px;
+            margin-top: 10px;
           }
-		  &:nth-child(2) {
-			width: 10%;
-			margin-top: 10px;
-		  }
+          &:nth-child(2) {
+            width: 10%;
+            margin-top: 10px;
+          }
         }
       }
     }
   }
-`;
+`

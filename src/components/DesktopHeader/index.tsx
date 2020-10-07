@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { useRouter } from 'next/router'
 
 import {
@@ -11,7 +11,7 @@ import {
   AddJob,
   AddExam,
   AddTraining
-} from './styles';
+} from './styles'
 
 const Header: React.FC = () => {
   const router = useRouter()
@@ -19,60 +19,79 @@ const Header: React.FC = () => {
   return (
     <Container>
       <Wrapper>
-        <div className="left homeIcon" onClick={()=>{router.push('/')}}>
-			<LinkedInIcon />
-		</div>
+        <div
+          className="left homeIcon"
+          onClick={() => {
+            router.push('/')
+          }}
+        >
+          <LinkedInIcon />
+        </div>
 
         <div className="right">
           <nav>
+            {router.pathname.includes('/admin') ? (
+              <>
+                <button
+                  onClick={() => {
+                    router.push('/add/job')
+                  }}
+                >
+                  <AddExam />
+                  <span>Add Exam</span>
+                </button>
+                <button
+                  onClick={() => {
+                    router.push('/add/job')
+                  }}
+                >
+                  <AddTraining />
+                  <span>Add Training</span>
+                </button>
+                <button
+                  onClick={() => {
+                    router.push('/add/job')
+                  }}
+                >
+                  <AddJob />
+                  <span>Add Job Opportunity</span>
+                </button>
+              </>
+            ) : (
+              <>
+                <button
+                  onClick={() => {
+                    router.push('/trainings')
+                  }}
+                >
+                  <TrainingIcon />
+                  <span>Trainings</span>
+                </button>
 
-		{router.pathname.includes('/admin') ? <>
-			<button onClick={()=>{router.push('/add/job')}}>
-              <AddExam />
-              <span>
-                Add Exam
-              </span>
-            </button>
-			<button onClick={()=>{router.push('/add/job')}}>
-              <AddTraining />
-              <span>
-                Add Training
-              </span>
-            </button>
-			<button onClick={()=>{router.push('/add/job')}}>
-              <AddJob />
-              <span>
-                Add Job Opportunity
-              </span>
-            </button></>:
-		<>
-		  <button onClick={()=>{router.push('/trainings')}}>
-              <TrainingIcon />
-              <span>
-                Trainings
-              </span>
-            </button>
+                <button
+                  onClick={() => {
+                    router.push('/exams')
+                  }}
+                >
+                  <ExamIcon />
+                  <span>My Exams</span>
+                </button>
 
-			<button onClick={()=>{router.push('/exams')}}>
-              <ExamIcon />
-              <span>
-                My Exams
-              </span>
-            </button>
-
-			<button onClick={()=>{router.push('/profile/me')}}>
-              <ProfileCircle src="https://icon-library.com/images/default-profile-icon/default-profile-icon-16.jpg" />
-              <span>
-                Me
-              </span>
-            </button>
-		</>
-		}
+                <button
+                  onClick={() => {
+                    router.push('/profile/me')
+                  }}
+                >
+                  <ProfileCircle src="https://icon-library.com/images/default-profile-icon/default-profile-icon-16.jpg" />
+                  <span>Me</span>
+                </button>
+              </>
+            )}
           </nav>
         </div>
       </Wrapper>
     </Container>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

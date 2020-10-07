@@ -1,12 +1,10 @@
-import styled, { css } from 'styled-components';
-import {
-	FcOk, FcHighPriority, FcSynchronize
-} from 'react-icons/fc';
+import styled, { css } from 'styled-components'
+import { FcOk, FcHighPriority, FcSynchronize } from 'react-icons/fc'
 
 export const Container = styled.div`
-	padding-bottom: 12px;
+  padding-bottom: 12px;
 
-	> div {
+  > div {
     margin-top: 8px;
     display: flex;
     flex-direction: column;
@@ -15,8 +13,8 @@ export const Container = styled.div`
     padding: 8px 12px 16px;
 
     .title {
-		color: var(--color-light);
-		margin-bottom: 10px;
+      color: var(--color-light);
+      margin-bottom: 10px;
     }
     ul {
       list-style: none;
@@ -55,7 +53,7 @@ export const Container = styled.div`
       }
     }
   }
-`;
+`
 
 export const Row = styled.div`
   justify-content: space-between !important;
@@ -103,21 +101,21 @@ const iconCSS = css`
   width: 24px;
   height: 24px;
   margin-right: 4px;
-`;
+`
 
 export const SuccessIcon = styled(FcOk)`
   ${iconCSS}
-`;
+`
 
 export const FailIcon = styled(FcHighPriority)`
   ${iconCSS}
-`;
+`
 
 export const EvaluationIcon = styled(FcSynchronize)`
   ${iconCSS}
-`;
+`
 
 export const Column = styled.div`
   display: flex;
   flex-direction: column;
-`;
+`

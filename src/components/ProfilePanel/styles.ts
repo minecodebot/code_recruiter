@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.div`
   padding-bottom: 12px;
@@ -55,4 +55,4 @@ export const Container = styled.div`
       color: var(--color-light);
     }
   }
-`;
+`

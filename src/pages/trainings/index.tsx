@@ -1,10 +1,8 @@
 import React from 'react'
-import LayoutTrainings from '../../components/Layout/Trainings';
+import LayoutTrainings from '../../components/Layout/Trainings'
 
 const Trainings: React.FC = () => {
-	return (
-		<LayoutTrainings />
-	)
+  return <LayoutTrainings />
 }
 
 export default Trainings

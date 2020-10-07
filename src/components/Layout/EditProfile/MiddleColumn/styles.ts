@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 import { VscSaveAs } from 'react-icons/vsc'
 
 export const Container = styled.div`
@@ -6,7 +6,7 @@ export const Container = styled.div`
     width: calc(100vh - 300px);
   }
 
-  height:100vh;
+  height: 100vh;
 
   overflow-y: scroll;
 
@@ -16,12 +16,11 @@ export const Container = styled.div`
   -ms-overflow-style: none;
   scrollbar-width: none;
 
-  max-height: calc(100vh - 120px)
-`;
+  max-height: calc(100vh - 120px);
+`
 
 export const Row = styled.div`
-
-&.actions {
+  &.actions {
     justify-content: space-between;
 
     @media (min-width: 1180px) {
@@ -55,15 +54,14 @@ export const Row = styled.div`
       }
     }
   }
-`;
-
+`
 
 const iconCSS = css`
   width: 24px;
   height: 24px;
   margin-right: 4px;
-`;
+`
 
 export const LikeIcon = styled(VscSaveAs)`
   ${iconCSS}
-`;
+`
