@@ -52,7 +52,7 @@ const FeedOpportunity: React.FC = () => {
 				<div className="right">
 				<button onClick={()=>{router.push('/')}}>
 					<ApplyIcon />
-					<span>Apply</span>
+					<span>Exam</span>
 				</button>
 				<button onClick={()=>{router.push('/training/code')}}>
 					<CommentIcon />
@@ -69,7 +69,7 @@ const FeedOpportunity: React.FC = () => {
 				<div className="right">
 				<button onClick={()=>{router.push('/')}}>
 					<ApplyIcon />
-					<span>Apply</span>
+					<span>Exam</span>
 				</button>
 				<button onClick={()=>{router.push('/training/code')}}>
 					<CommentIcon />
