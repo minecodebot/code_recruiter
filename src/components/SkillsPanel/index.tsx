@@ -1,7 +1,6 @@
 import React from 'react'
 import HashtagItem from './SkillItem'
 import Panel from '../Panel'
-
 import { Container } from './styles'
 
 export interface Props {

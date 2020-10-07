@@ -1,8 +1,6 @@
 import React from 'react'
-
 import Panel from '../Panel'
 import { useRouter } from 'next/router'
-
 import { Container, CommentIcon, Row, Column } from './styles'
 
 const TrainingPanel: React.FC = () => {

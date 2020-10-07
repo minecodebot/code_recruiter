@@ -1,5 +1,4 @@
 import React from 'react'
-
 import ExamsResponsesPanel from '../../../../ExamsResponsesPanel'
 import { Container, Row } from './styles'
 import LoadingExamsPanel from '../../../../Shimmer/LoadingExamsPanel'

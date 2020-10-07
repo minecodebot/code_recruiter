@@ -1,5 +1,4 @@
-import styled, { css } from 'styled-components'
-import { FcPositiveDynamic } from 'react-icons/fc'
+import styled from 'styled-components'
 
 export const Container = styled.div`
   padding-bottom: 12px;
@@ -95,19 +94,4 @@ export const Row = styled.div`
       }
     }
   }
-`
-
-const iconCSS = css`
-  width: 24px;
-  height: 24px;
-  margin-right: 4px;
-`
-
-export const CommentIcon = styled(FcPositiveDynamic)`
-  ${iconCSS}
-`
-
-export const Column = styled.div`
-  display: flex;
-  flex-direction: column;
 `

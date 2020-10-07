@@ -1,11 +1,9 @@
 import React from 'react'
-
 import LoadingProfilePanel from '../../../Shimmer/LoadingProfilePanel'
 import ProfilePanel from '../../../ProfilePanel'
 import SkillsPanel from '../../../SkillsPanel'
 import TrainingPanel from '../../../TrainingPanel'
 import CompletedTrainingPanel from '../../../CompletedTrainingPanel'
-
 import { Container } from './styles'
 import LoadingTrainingPanel from '../../../Shimmer/LoadingTrainingPanel'
 

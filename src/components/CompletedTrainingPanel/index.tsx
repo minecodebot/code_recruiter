@@ -1,12 +1,8 @@
 import React from 'react'
-
 import Panel from '../Panel'
-import { useRouter } from 'next/router'
-
-import { Container, CommentIcon, Row, Column } from './styles'
+import { Container, Row } from './styles'
 
 const CompletedTrainingPanel: React.FC = () => {
-  const router = useRouter()
   return (
     <Container>
       <Panel>

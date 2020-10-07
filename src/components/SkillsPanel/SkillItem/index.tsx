@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { HashtagIcon, HashtagIconCertified } from './styles'
 
 export interface Props {

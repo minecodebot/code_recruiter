@@ -1,8 +1,6 @@
 import React from 'react'
-
 import LoadingFeedOpportunity from '../../../Shimmer/LoadingFeedOpportunity'
 import FeedOpportunity from '../../../FeedOpportunity'
-
 import { Container } from './styles'
 
 const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {

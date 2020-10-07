@@ -1,10 +1,8 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-
 import LoadingProfilePanel from '../../../Shimmer/LoadingProfilePanel'
 import ProfilePanel from '../../../ProfilePanel'
 import SkillsPanel from '../../../SkillsPanel'
-import TrainingPanel from '../../../TrainingPanel'
 import { Container, LikeIcon, Row } from './styles'
 import LoadingTrainingPanel from '../../../Shimmer/LoadingTrainingPanel'
 

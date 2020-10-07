@@ -1,20 +1,15 @@
-import React, { useState } from 'react'
-
+import React from 'react'
 import Panel from '../../Panel'
 import { useRouter } from 'next/router'
-
 import {
   Container,
   Row,
   Separator,
   Avatar,
   Column,
-  LikeIcon,
   CommentIcon,
   ApplyIcon,
   HashtagIconCertified,
-  LikeIconLess,
-  AddExam,
   EditIcon,
   ResponsesIcon
 } from '../styles'

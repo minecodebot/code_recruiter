@@ -55,13 +55,3 @@ export const Row = styled.div`
     }
   }
 `
-
-const iconCSS = css`
-  width: 24px;
-  height: 24px;
-  margin-right: 4px;
-`
-
-export const LikeIcon = styled(FcSupport)`
-  ${iconCSS}
-`

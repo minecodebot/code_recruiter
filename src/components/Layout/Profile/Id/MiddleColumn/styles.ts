@@ -1,5 +1,4 @@
-import styled, { css } from 'styled-components'
-import { FcSupport } from 'react-icons/fc'
+import styled from 'styled-components'
 
 export const Container = styled.div`
   @media (min-width: 1180px) {
@@ -54,14 +53,4 @@ export const Row = styled.div`
       }
     }
   }
-`
-
-const iconCSS = css`
-  width: 24px;
-  height: 24px;
-  margin-right: 4px;
-`
-
-export const LikeIcon = styled(FcSupport)`
-  ${iconCSS}
 `

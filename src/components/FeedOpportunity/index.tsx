@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
-
 import Panel from '../Panel'
 import { useRouter } from 'next/router'
-
 import {
   Container,
   Row,

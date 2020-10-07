@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components'
 import { GrLinkedin } from 'react-icons/gr'
-import { AiFillHome, AiOutlineBell } from 'react-icons/ai'
 import { FcPositiveDynamic, FcSignature, FcPlus } from 'react-icons/fc'
 
 export const Container = styled.div`
@@ -73,35 +72,6 @@ export const LinkedInIcon = styled(GrLinkedin)`
   background-color: var(--color-header);
   border-radius: 4px;
   flex-shrink: 0;
-`
-
-export const SearchInput = styled.input`
-  margin-left: 12px;
-
-  background: var(--color-input);
-  color: var(--color-black);
-  font-size: 14px;
-  padding: 7.5px 8px;
-  border: none;
-  outline: none;
-  border-radius: 2px;
-
-  &:focus {
-    background: var(--color-dark);
-  }
-`
-
-const generalIconCSS = css`
-  width: 24px;
-  height: 24px;
-`
-
-export const HomeIcon = styled(AiFillHome)`
-  ${generalIconCSS}
-`
-
-export const NotificationsIcon = styled(AiOutlineBell)`
-  ${generalIconCSS}
 `
 
 export const ProfileCircle = styled.img`
