@@ -1,10 +1,7 @@
 # code_recruiter
 
 ## Homepage
-![alt](https://i.gyazo.com/7fb4541a7c2d2601930d97520ccf994e.png)
-
-## Opportunity page
-![alt](https://i.gyazo.com/1b2273bc6bc60c83eaef9c91c4a73176.png)
+![alt](https://i.gyazo.com/b346887ef7dc62ff8e938193ad8f5ba7.png)
 
 ## Profile page
 ![alt](https://i.gyazo.com/c0b0950f46ef602a392f64f0eadc732e.png)
