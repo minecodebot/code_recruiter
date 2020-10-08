@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { GrLinkedin } from 'react-icons/gr'
+import { FcPuzzle } from 'react-icons/fc'
 import { FcPositiveDynamic, FcSignature, FcPlus } from 'react-icons/fc'
 
 export const Container = styled.div`
@@ -65,7 +65,7 @@ export const Wrapper = styled.div`
   }
 `
 
-export const LinkedInIcon = styled(GrLinkedin)`
+export const LinkedInIcon = styled(FcPuzzle)`
   height: 34px;
   width: 34px;
   color: var(--color-light);

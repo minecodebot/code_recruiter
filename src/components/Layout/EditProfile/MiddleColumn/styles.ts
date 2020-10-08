@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components'
-import { VscSaveAs } from 'react-icons/vsc'
-
+import { FcSimCard } from 'react-icons/fc'
 export const Container = styled.div`
   @media (min-width: 1180px) {
     width: calc(100vh - 300px);
@@ -62,6 +61,6 @@ const iconCSS = css`
   margin-right: 4px;
 `
 
-export const LikeIcon = styled(VscSaveAs)`
+export const LikeIcon = styled(FcSimCard)`
   ${iconCSS}
 `

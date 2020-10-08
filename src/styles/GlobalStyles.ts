@@ -16,6 +16,13 @@ export default createGlobalStyle`
   *, button, input {
     font-family: -apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif;
   }
+
+  input, textarea, select {
+    border: none;
+    background-color: var(--color-medium);
+    color: var(--color-input) !important;
+  }
+
   :root {
     --color-header: #D62828;
     --color-background: #000D14;

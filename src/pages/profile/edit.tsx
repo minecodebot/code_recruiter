@@ -1,8 +1,16 @@
 import React from 'react'
-import LayoutMyProfileEdit from '../../components/Layout/EditProfile'
+import Head from 'next/head'
+import LayoutEditProfile from '../../components/Layout/EditProfile'
 
-const Home: React.FC = () => {
-  return <LayoutMyProfileEdit />
+const Trainings: React.FC = () => {
+  return (
+    <>
+      <Head>
+        <title>Job Search Plataform - Edit Profile</title>
+      </Head>
+      <LayoutEditProfile />
+    </>
+  )
 }
 
-export default Home
+export default Trainings
