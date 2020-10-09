@@ -2,7 +2,7 @@ import React from 'react'
 import LoadingProfilePanel from '../../../../Shimmer/LoadingProfilePanel'
 import ProfilePanel from '../../../../ProfilePanel'
 import SkillsPanel from '../../../../SkillsPanel'
-import CompletedTrainingPanel from '../../../../CompletedTrainingPanel'
+import TrainingPanel from '../../../../TrainingPanel'
 import { Container, Row } from './styles'
 import LoadingTrainingPanel from '../../../../Shimmer/LoadingTrainingPanel'
 
@@ -14,6 +14,11 @@ const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
     ['Competence 4', false],
     ['Competence 5', true],
     ['Competence 6', true]
+  ]
+  const completedTrainings = [
+    { title: 'Training Title 7', level: 'level' },
+    { title: 'Training Title 8', level: 'level' },
+    { title: 'Training Title 9', level: 'level' }
   ]
   return (
     <Container className="middle-column">
@@ -27,7 +32,7 @@ const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
         <Row className="actions">
           <ProfilePanel />
           <SkillsPanel tags={competences} />
-          <CompletedTrainingPanel />
+          <TrainingPanel title="Completed" trainings={completedTrainings} />
         </Row>
       )}
     </Container>

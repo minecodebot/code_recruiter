@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import MobileHeader from '../../MobileHeader'
-import DesktopHeader from '../../DesktopHeader'
-import AdBanner from '../../AdBanner'
-import LeftColumn from './LeftColumn'
 import MiddleColumn from './MiddleColumn'
-import { Container } from '../styles'
+import RightColumn from './RightColumn'
+import TwoColumns from '../TwoColumns'
 
-const Layout: React.FC = () => {
+const LayoutEditProfile: React.FC = () => {
   const [isLoading, setLoading] = useState(true)
+  const Columns = TwoColumns(MiddleColumn, RightColumn)
 
   useEffect(() => {
     setTimeout(() => {
@@ -15,19 +13,7 @@ const Layout: React.FC = () => {
     }, 1000)
   }, [])
 
-  return (
-    <Container>
-      <MobileHeader />
-      <DesktopHeader />
-
-      <span>{!isLoading && <AdBanner />}</span>
-
-      <main>
-        <MiddleColumn isLoading={isLoading} />
-        <LeftColumn isLoading={isLoading} />
-      </main>
-    </Container>
-  )
+  return <Columns isLoading={isLoading} />
 }
 
-export default Layout
+export default LayoutEditProfile

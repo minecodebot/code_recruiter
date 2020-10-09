@@ -1,6 +1,6 @@
 import React from 'react'
 import Panel from '../Panel'
-import { Container, Row, Column } from './styles'
+import { Column, Container, Row } from '../../styles/GlobalStyles'
 import Button from '../Button'
 const ExamsPanel: React.FC = () => {
   const exams = [

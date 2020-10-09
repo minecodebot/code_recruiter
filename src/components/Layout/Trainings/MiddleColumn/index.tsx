@@ -1,11 +1,24 @@
 import React from 'react'
 import TrainingPanel from '../../../TrainingPanel'
-import CompletedTrainingPanel from '../../../CompletedTrainingPanel'
-import AllTrainingsPanel from '../../../AllTrainingsPanel'
 import { Container, Row } from './styles'
 import LoadingTrainingPanel from '../../../Shimmer/LoadingTrainingPanel'
 
 const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
+  const allTrainings = [
+    { title: 'Training Title 7', level: 'level' },
+    { title: 'Training Title 8', level: 'level' },
+    { title: 'Training Title 9', level: 'level' }
+  ]
+  const completedTrainings = [
+    { title: 'Training Title 7', level: 'level' },
+    { title: 'Training Title 8', level: 'level' },
+    { title: 'Training Title 9', level: 'level' }
+  ]
+  const suggestedTrainings = [
+    { title: 'Training Title 7', level: 'level' },
+    { title: 'Training Title 8', level: 'level' },
+    { title: 'Training Title 9', level: 'level' }
+  ]
   return (
     <Container className="middle-column">
       {isLoading ? (
@@ -16,9 +29,9 @@ const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
         </>
       ) : (
         <Row className="actions">
-          <CompletedTrainingPanel />
-          <TrainingPanel />
-          <AllTrainingsPanel />
+          <TrainingPanel title="Completed" trainings={completedTrainings} />
+          <TrainingPanel title="Suggested" trainings={suggestedTrainings} />
+          <TrainingPanel title="All" trainings={allTrainings} />
         </Row>
       )}
     </Container>

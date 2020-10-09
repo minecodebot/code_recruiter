@@ -1,19 +1,18 @@
 import React from 'react'
 import Panel from '../Panel'
-import { useRouter } from 'next/router'
-import { Container, Row, Column } from './styles'
+import { Column, Container, Row } from '../../styles/GlobalStyles'
 import Button from '../Button'
 
-const TrainingPanel: React.FC = () => {
-  const trainings = [
-    { title: 'Training Title 7', level: 'level' },
-    { title: 'Training Title 8', level: 'level' },
-    { title: 'Training Title 9', level: 'level' }
-  ]
+export interface Props {
+  title: string
+  trainings: { title: string; level: string }[]
+}
+
+const TrainingPanel: React.FC<Props> = ({ title, trainings }) => {
   return (
     <Container>
       <Panel>
-        <span className="title">Suggested Trainings</span>
+        <span className="title">{title} Trainings</span>
         <ul>
           {trainings ? (
             trainings.map(item => {
@@ -22,10 +21,18 @@ const TrainingPanel: React.FC = () => {
                   <Row className="actions">
                     <Column>
                       <h3>{item.title}</h3>
-                      <span className="subtext">{item.level}</span>
+                      {title === 'Completed' ? (
+                        <></>
+                      ) : (
+                        <span className="subtext">{item.level}</span>
+                      )}
                     </Column>
                     <Column>
-                      <Button type="training" url="/training/code" />
+                      {title === 'Completed' ? (
+                        <span className="subtext">{item.level}</span>
+                      ) : (
+                        <Button type="training" url="/training/code" />
+                      )}
                     </Column>
                   </Row>
                 </li>
