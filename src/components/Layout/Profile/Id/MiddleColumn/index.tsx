@@ -30,7 +30,7 @@ const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
         </>
       ) : (
         <Row className="actions">
-          <ProfilePanel />
+          <ProfilePanel personalDataHidden={true} />
           <SkillsPanel tags={competences} />
           <TrainingPanel title="Completed" trainings={completedTrainings} />
         </Row>

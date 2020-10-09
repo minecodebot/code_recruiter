@@ -74,6 +74,8 @@ const ProfilePanelEdit: React.FC = () => {
             </select>
           </div>
 
+          <div className="separator"></div>
+
           <div className="key-value">
             <label htmlFor="selftPresentationLetter" className="key">
               Self presentation letter:

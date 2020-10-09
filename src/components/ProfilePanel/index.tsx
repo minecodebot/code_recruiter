@@ -1,8 +1,28 @@
 import React from 'react'
 import Panel from '../Panel'
 import { Container } from './styles'
+import {
+  uniqueNamesGenerator,
+  Config,
+  names,
+  starWars
+} from 'unique-names-generator'
 
-const ProfilePanel: React.FC = () => {
+export interface Props {
+  personalDataHidden?: boolean
+}
+
+const ProfilePanel: React.FC<Props> = ({ personalDataHidden }) => {
+  const config: Config = {
+    dictionaries: [names, starWars],
+    length: 2,
+    style: 'capital'
+  }
+  const characterName: string = uniqueNamesGenerator(config) // Winona
+  let name = 'Name Surname'
+  if (personalDataHidden) {
+    name = characterName.split('_').join(' ')
+  }
   return (
     <Container>
       <Panel>
@@ -12,8 +32,8 @@ const ProfilePanel: React.FC = () => {
           alt="Avatar"
           className="profile-picture"
         />
-        <h1>Name Surname</h1>
-        <h2>Job Title @ Company</h2>
+        <h1>{name}</h1>
+        {personalDataHidden ? <></> : <h2>Job Title @ Company</h2>}
 
         <div className="separator"></div>
 
@@ -25,6 +45,31 @@ const ProfilePanel: React.FC = () => {
           <span className="key">Job Situation</span>
           <span className="value">Status</span>
         </div>
+
+        <div className="separator"></div>
+
+        <div className="key-value">
+          <span className="key">Presentation Letter</span>
+          {personalDataHidden ? (
+            <span className="value">Formal, Friendly</span>
+          ) : (
+            <></>
+          )}
+        </div>
+        {personalDataHidden ? (
+          <></>
+        ) : (
+          <div className="key-value">
+            <span className="value">
+              asdsd hasjdhas jkhasdjk ashdja hdjk asjdk hasdjk asdsd hasjdhas
+              jkhasdjk ashdja hdjk asjdk hasdjk asdsd hasjdhas jkhasdjk ashdja
+              hdjk asjdk hasdjk asdsd hasjdhas jkhasdjk ashdja hdjk asjdk hasdjk{' '}
+              asdsd hasjdhas jkhasdjk ashdja hdjk asjdk hasdjk asdsd hasjdhas
+              jkhasdjk ashdja hdjk asjdk hasdjk asdsd hasjdhas jkhasdjk ashdja
+              hdjk asjdk hasdjk{' '}
+            </span>
+          </div>
+        )}
       </Panel>
     </Container>
   )
