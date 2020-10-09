@@ -17,9 +17,10 @@ export const Container = styled.div`
     border: 2px solid var(--color-background);
     box-shadow: inset 0 1.5px 3px 0 var(--black-a15, rgba(0, 0, 0, 0.15)),
       0 1.5px 3px 0 var(--black-a15, rgba(0, 0, 0, 0.15));
-
-    display: flex;
+  }
+  .profile-picture:not(.list) {
     margin: -38px auto 12px;
+    display: flex;
   }
   h1 {
     font-size: 16px;

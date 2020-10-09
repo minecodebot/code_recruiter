@@ -36,7 +36,7 @@ const RightColumn: React.FC<LoadingProps> = ({ isLoading }) => {
         </>
       ) : (
         <>
-          <ProfilePanel />
+          <ProfilePanel short={true} />
           <SkillsPanel tags={competences} />
           <TrainingPanel title="Completed" trainings={completedTrainings} />
           <TrainingPanel title="Suggested" trainings={suggestedTrainings} />

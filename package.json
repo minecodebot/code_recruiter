@@ -8,12 +8,15 @@
     "start": "next start"
   },
   "dependencies": {
+    "list-files": "^1.1.4",
+    "list-react-files": "^0.2.0",
     "next": "9.5.3",
     "next-images": "^1.4.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-icons": "^3.11.0",
     "react-scripts": "^3.4.3",
+    "react-user-avatar": "^1.10.0",
     "styled-components": "^5.1.1",
     "unique-names-generator": "^4.3.1"
   },

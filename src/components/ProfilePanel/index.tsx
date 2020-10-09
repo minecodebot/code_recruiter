@@ -7,12 +7,13 @@ import {
   names,
   starWars
 } from 'unique-names-generator'
-
+import UserAvatar from 'react-user-avatar'
 export interface Props {
   personalDataHidden?: boolean
+  short?: boolean
 }
 
-const ProfilePanel: React.FC<Props> = ({ personalDataHidden }) => {
+const ProfilePanel: React.FC<Props> = ({ personalDataHidden, short }) => {
   const config: Config = {
     dictionaries: [names, starWars],
     length: 2,
@@ -23,14 +24,16 @@ const ProfilePanel: React.FC<Props> = ({ personalDataHidden }) => {
   if (personalDataHidden) {
     name = characterName.split('_').join(' ')
   }
+
   return (
     <Container>
       <Panel>
         <div className="profile-cover"></div>
-        <img
-          src="https://icon-library.com/images/default-profile-icon/default-profile-icon-16.jpg"
-          alt="Avatar"
+        <UserAvatar
+          size="72"
           className="profile-picture"
+          alt="Avatar"
+          name={name}
         />
         <h1>{name}</h1>
         {personalDataHidden ? <></> : <h2>Job Title @ Company</h2>}
@@ -47,28 +50,33 @@ const ProfilePanel: React.FC<Props> = ({ personalDataHidden }) => {
         </div>
 
         <div className="separator"></div>
-
-        <div className="key-value">
-          <span className="key">Presentation Letter</span>
-          {personalDataHidden ? (
-            <span className="value">Formal, Friendly</span>
-          ) : (
-            <></>
-          )}
-        </div>
-        {personalDataHidden ? (
+        {short ? (
           <></>
         ) : (
-          <div className="key-value">
-            <span className="value">
-              asdsd hasjdhas jkhasdjk ashdja hdjk asjdk hasdjk asdsd hasjdhas
-              jkhasdjk ashdja hdjk asjdk hasdjk asdsd hasjdhas jkhasdjk ashdja
-              hdjk asjdk hasdjk asdsd hasjdhas jkhasdjk ashdja hdjk asjdk hasdjk{' '}
-              asdsd hasjdhas jkhasdjk ashdja hdjk asjdk hasdjk asdsd hasjdhas
-              jkhasdjk ashdja hdjk asjdk hasdjk asdsd hasjdhas jkhasdjk ashdja
-              hdjk asjdk hasdjk{' '}
-            </span>
-          </div>
+          <>
+            <div className="key-value">
+              <span className="key">Presentation Letter</span>
+              {personalDataHidden ? (
+                <span className="value">Formal, Friendly</span>
+              ) : (
+                <></>
+              )}
+            </div>
+            {personalDataHidden ? (
+              <></>
+            ) : (
+              <div className="key-value">
+                <span className="value">
+                  asdsd hasjdhas jkhasdjk ashdja hdjk asjdk hasdjk asdsd
+                  hasjdhas jkhasdjk ashdja hdjk asjdk hasdjk asdsd hasjdhas
+                  jkhasdjk ashdja hdjk asjdk hasdjk asdsd hasjdhas jkhasdjk
+                  ashdja hdjk asjdk hasdjk asdsd hasjdhas jkhasdjk ashdja hdjk
+                  asjdk hasdjk asdsd hasjdhas jkhasdjk ashdja hdjk asjdk hasdjk
+                  asdsd hasjdhas jkhasdjk ashdja hdjk asjdk hasdjk{' '}
+                </span>
+              </div>
+            )}
+          </>
         )}
       </Panel>
     </Container>

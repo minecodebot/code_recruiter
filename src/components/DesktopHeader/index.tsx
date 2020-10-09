@@ -8,6 +8,7 @@ import {
   TrainingIcon,
   ExamIcon
 } from './styles'
+import UserAvatar from 'react-user-avatar'
 
 const Header: React.FC = () => {
   const router = useRouter()
@@ -49,7 +50,12 @@ const Header: React.FC = () => {
                 router.push('/profile/me')
               }}
             >
-              <ProfileCircle src="https://icon-library.com/images/default-profile-icon/default-profile-icon-16.jpg" />
+              <UserAvatar
+                size="24"
+                className="profile-picture"
+                alt="Avatar"
+                name="Name Surname"
+              />
               <span>Me</span>
             </button>
           </nav>
