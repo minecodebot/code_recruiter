@@ -7,7 +7,7 @@ import MiddleColumn from './MiddleColumn'
 
 import { Container } from '../../styles'
 
-const LayoutApply: React.FC = () => {
+const LayoutProfileId: React.FC = () => {
   const [isLoading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -30,4 +30,4 @@ const LayoutApply: React.FC = () => {
   )
 }
 
-export default LayoutApply
+export default LayoutProfileId
