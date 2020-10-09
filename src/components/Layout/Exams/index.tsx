@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import MiddleColumn from './MiddleColumn'
 import OneColumn from '../OneColumn'
 
-const LayoutEditProfile: React.FC = () => {
+const LayouExams: React.FC = () => {
   const [isLoading, setLoading] = useState(true)
   const Column = OneColumn(MiddleColumn)
 
@@ -15,4 +15,4 @@ const LayoutEditProfile: React.FC = () => {
   return <Column isLoading={isLoading} />
 }
 
-export default LayoutEditProfile
+export default LayouExams

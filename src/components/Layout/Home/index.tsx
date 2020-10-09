@@ -3,7 +3,7 @@ import MiddleColumn from './MiddleColumn'
 import RightColumn from './RightColumn'
 import TwoColumns from '../TwoColumns'
 
-const LayoutEditProfile: React.FC = () => {
+const LayoutHome: React.FC = () => {
   const [isLoading, setLoading] = useState(true)
   const Columns = TwoColumns(MiddleColumn, RightColumn)
 
@@ -16,4 +16,4 @@ const LayoutEditProfile: React.FC = () => {
   return <Columns isLoading={isLoading} />
 }
 
-export default LayoutEditProfile
+export default LayoutHome
