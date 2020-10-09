@@ -3,7 +3,7 @@ import Panel from '../../Panel'
 import Skeleton from '../../Skeleton'
 import { Container } from './styles'
 
-const LoadingTrainingPanel: React.FC = () => {
+const LoadingExamTrainingPanel: React.FC = () => {
   return (
     <Container>
       <Panel className="no-shadow">
@@ -24,4 +24,4 @@ const LoadingTrainingPanel: React.FC = () => {
   )
 }
 
-export default LoadingTrainingPanel
+export default LoadingExamTrainingPanel

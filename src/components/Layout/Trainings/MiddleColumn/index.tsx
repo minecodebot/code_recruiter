@@ -1,7 +1,7 @@
 import React from 'react'
 import TrainingPanel from '../../../TrainingPanel'
 import { Container, Row } from './styles'
-import LoadingTrainingPanel from '../../../Shimmer/LoadingTrainingPanel'
+import LoadingExamTrainingPanel from '../../../Shimmer/LoadingExamTrainingPanel'
 
 const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
   const allTrainings = [
@@ -23,9 +23,9 @@ const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
     <Container className="middle-column">
       {isLoading ? (
         <>
-          <LoadingTrainingPanel />
-          <LoadingTrainingPanel />
-          <LoadingTrainingPanel />
+          <LoadingExamTrainingPanel />
+          <LoadingExamTrainingPanel />
+          <LoadingExamTrainingPanel />
         </>
       ) : (
         <Row className="actions">

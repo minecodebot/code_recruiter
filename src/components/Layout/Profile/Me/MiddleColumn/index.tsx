@@ -4,7 +4,7 @@ import ProfilePanel from '../../../../ProfilePanel'
 import SkillsPanel from '../../../../SkillsPanel'
 import TrainingPanel from '../../../../TrainingPanel'
 import { Container, Row } from './styles'
-import LoadingTrainingPanel from '../../../../Shimmer/LoadingTrainingPanel'
+import LoadingExamTrainingPanel from '../../../../Shimmer/LoadingExamTrainingPanel'
 import Button from '../../../../Button'
 
 const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
@@ -31,9 +31,9 @@ const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
       {isLoading ? (
         <>
           <LoadingProfilePanel />
-          <LoadingTrainingPanel />
-          <LoadingTrainingPanel />
-          <LoadingTrainingPanel />
+          <LoadingExamTrainingPanel />
+          <LoadingExamTrainingPanel />
+          <LoadingExamTrainingPanel />
         </>
       ) : (
         <Row className="actions">

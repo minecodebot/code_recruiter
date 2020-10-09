@@ -1,13 +1,13 @@
 import React from 'react'
 import ExamsPanel from '../../../ExamsPanel'
 import { Container, Row } from './styles'
-import LoadingExamsPanel from '../../../Shimmer/LoadingExamsPanel'
+import LoadingExamTrainingPanel from '../../../Shimmer/LoadingExamTrainingPanel'
 
 const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
   return (
     <Container className="middle-column">
       {isLoading ? (
-        <LoadingExamsPanel />
+        <LoadingExamTrainingPanel />
       ) : (
         <Row className="actions">
           <ExamsPanel />

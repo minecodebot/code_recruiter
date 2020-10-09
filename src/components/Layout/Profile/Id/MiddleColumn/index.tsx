@@ -4,7 +4,7 @@ import ProfilePanel from '../../../../ProfilePanel'
 import SkillsPanel from '../../../../SkillsPanel'
 import TrainingPanel from '../../../../TrainingPanel'
 import { Container, Row } from './styles'
-import LoadingTrainingPanel from '../../../../Shimmer/LoadingTrainingPanel'
+import LoadingExamTrainingPanel from '../../../../Shimmer/LoadingExamTrainingPanel'
 
 const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
   const competences = [
@@ -25,8 +25,8 @@ const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
       {isLoading ? (
         <>
           <LoadingProfilePanel />
-          <LoadingTrainingPanel />
-          <LoadingTrainingPanel />
+          <LoadingExamTrainingPanel />
+          <LoadingExamTrainingPanel />
         </>
       ) : (
         <Row className="actions">
