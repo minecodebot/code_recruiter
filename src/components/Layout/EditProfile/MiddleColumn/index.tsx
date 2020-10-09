@@ -2,7 +2,7 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import LoadingProfilePanel from '../../../Shimmer/LoadingProfilePanel'
 import ProfilePanelEdit from '../../../ProfilePanelEdit'
-import { Container, LikeIcon, Row } from './styles'
+import { Container, Row } from './styles'
 import LoadingTrainingPanel from '../../../Shimmer/LoadingTrainingPanel'
 
 const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {

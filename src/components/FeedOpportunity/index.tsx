@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Panel from '../Panel'
-import { useRouter } from 'next/router'
 import {
   Container,
   Row,
@@ -8,14 +7,11 @@ import {
   Avatar,
   Column,
   LikeIcon,
-  CommentIcon,
-  ApplyIcon,
   HashtagIconCertified,
   LikeIconLess
 } from './styles'
-
+import Button from '../Button'
 const FeedOpportunity: React.FC = () => {
-  const router = useRouter()
   const [fullOpportunity, setFullOpportunity] = useState(false)
   return (
     <Panel>
@@ -96,9 +92,9 @@ const FeedOpportunity: React.FC = () => {
         </Row>
 
         <Row className="actions">
-          {fullOpportunity ? (
-            <div className="buttons">
-              <div className="left">
+          <div className="buttons">
+            <div className="left">
+              {fullOpportunity ? (
                 <button
                   onClick={() => {
                     setFullOpportunity(!fullOpportunity)
@@ -107,29 +103,7 @@ const FeedOpportunity: React.FC = () => {
                   <LikeIconLess />
                   <span>View less</span>
                 </button>
-              </div>
-              <div className="right">
-                <button
-                  onClick={() => {
-                    router.push('/exam/code')
-                  }}
-                >
-                  <ApplyIcon />
-                  <span>Exam</span>
-                </button>
-                <button
-                  onClick={() => {
-                    router.push('/training/code')
-                  }}
-                >
-                  <CommentIcon />
-                  <span>Training</span>
-                </button>
-              </div>
-            </div>
-          ) : (
-            <div className="buttons">
-              <div className="left">
+              ) : (
                 <button
                   onClick={() => {
                     setFullOpportunity(!fullOpportunity)
@@ -138,27 +112,13 @@ const FeedOpportunity: React.FC = () => {
                   <LikeIcon />
                   <span>View more</span>
                 </button>
-              </div>
-              <div className="right">
-                <button
-                  onClick={() => {
-                    router.push('/exam/code')
-                  }}
-                >
-                  <ApplyIcon />
-                  <span>Exam</span>
-                </button>
-                <button
-                  onClick={() => {
-                    router.push('/training/code')
-                  }}
-                >
-                  <CommentIcon />
-                  <span>Training</span>
-                </button>
-              </div>
+              )}
             </div>
-          )}
+            <div className="right">
+              <Button url="/exam/code" type="exam" />
+              <Button url="/training/code" type="training" />
+            </div>
+          </div>
         </Row>
       </Container>
     </Panel>

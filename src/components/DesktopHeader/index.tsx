@@ -6,10 +6,7 @@ import {
   LinkedInIcon,
   ProfileCircle,
   TrainingIcon,
-  ExamIcon,
-  AddJob,
-  AddExam,
-  AddTraining
+  ExamIcon
 } from './styles'
 
 const Header: React.FC = () => {

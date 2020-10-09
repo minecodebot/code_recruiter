@@ -1,15 +1,14 @@
 import React from 'react'
-import { useRouter } from 'next/router'
 import LoadingProfilePanel from '../../../../Shimmer/LoadingProfilePanel'
 import ProfilePanel from '../../../../ProfilePanel'
 import SkillsPanel from '../../../../SkillsPanel'
 import TrainingPanel from '../../../../TrainingPanel'
 import CompletedTrainingPanel from '../../../../CompletedTrainingPanel'
-import { Container, LikeIcon, Row } from './styles'
+import { Container, Row } from './styles'
 import LoadingTrainingPanel from '../../../../Shimmer/LoadingTrainingPanel'
+import Button from '../../../../Button'
 
 const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
-  const router = useRouter()
   const competences = [
     ['Competence 1', false],
     ['Competence 2', false],
@@ -29,14 +28,7 @@ const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
         </>
       ) : (
         <Row className="actions">
-          <button
-            onClick={() => {
-              router.push('/profile/edit')
-            }}
-          >
-            <LikeIcon />
-            <span>Edit Profile</span>
-          </button>
+          <Button type="edit" url="/profile/edit" />
           <ProfilePanel />
           <SkillsPanel tags={competences} />
           <CompletedTrainingPanel />

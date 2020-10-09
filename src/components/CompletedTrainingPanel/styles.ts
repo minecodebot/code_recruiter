@@ -95,3 +95,8 @@ export const Row = styled.div`
     }
   }
 `
+
+export const Column = styled.div`
+  display: flex;
+  flex-direction: column;
+`

@@ -2,6 +2,7 @@ import React from 'react'
 import Panel from '../Panel'
 import { useRouter } from 'next/router'
 import { Container, LikeIcon } from './styles'
+import Button from '../Button'
 
 const ProfilePanelEdit: React.FC = () => {
   const router = useRouter()
@@ -85,9 +86,8 @@ const ProfilePanelEdit: React.FC = () => {
             />
           </div>
         </Panel>
-        <button type="submit" className="btn btn-default">
-          <LikeIcon />
-          <span>Save</span>
+        <button type="submit">
+          <Button type="save" />
         </button>
       </form>
     </Container>
