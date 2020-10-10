@@ -4,7 +4,7 @@ import Panel from '../Panel'
 import { Container } from './styles'
 
 export interface Props {
-  tags: (string | boolean)[][]
+  tags: string[]
 }
 
 const SkillsPanel: React.FC<Props> = ({ tags }) => {

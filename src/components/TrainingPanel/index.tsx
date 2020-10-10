@@ -5,7 +5,7 @@ import Button from '../Button'
 
 export interface Props {
   title: string
-  trainings: { title: string; level: string }[]
+  trainings: { id: number; title: string; level: string }[]
 }
 
 const TrainingPanel: React.FC<Props> = ({ title, trainings }) => {
@@ -31,7 +31,10 @@ const TrainingPanel: React.FC<Props> = ({ title, trainings }) => {
                       {title === 'Completed' ? (
                         <span className="subtext">{item.level}</span>
                       ) : (
-                        <Button type="training" url="/training/code" />
+                        <Button
+                          type="training"
+                          url={`/training/code?id=${item.id}`}
+                        />
                       )}
                     </Column>
                   </Row>

@@ -11,7 +11,28 @@ import {
   LikeIconLess
 } from './styles'
 import Button from '../Button'
-const FeedOpportunity: React.FC = () => {
+
+export interface Props {
+  title: string
+  company: string
+  post_date: string
+  short_description: string
+  long_description: string
+  competences: string[]
+  exam: number
+  trainings: number[]
+}
+
+const FeedOpportunity: React.FC<Props> = ({
+  title,
+  company,
+  post_date,
+  short_description,
+  long_description,
+  competences,
+  exam,
+  trainings
+}) => {
   const [fullOpportunity, setFullOpportunity] = useState(false)
   return (
     <Panel>
@@ -19,9 +40,9 @@ const FeedOpportunity: React.FC = () => {
         <Row className="heading">
           <Avatar src="https://i.imgur.com/81RtXfT.jpg" alt="Rocketseat" />
           <Column>
-            <h3>Job Title</h3>
-            <h4>Company</h4>
-            <time>Post date</time>
+            <h3>{title}</h3>
+            <h4>{company}</h4>
+            <time>{post_date}</time>
           </Column>
         </Row>
         <Row className="description">
@@ -29,59 +50,27 @@ const FeedOpportunity: React.FC = () => {
             {fullOpportunity ? (
               <>
                 <span className="title">Description</span>
-                <p>
-                  Nam condimentum commodo ligula, imperdiet auctor justo
-                  ultrices sed. Aenean nec nisi vestibulum turpis pulvinar
-                  lobortis quis at magna.
-                </p>
-                <p>
-                  Nam condimentum commodo ligula, imperdiet auctor justo
-                  ultrices sed. Aenean nec nisi vestibulum turpis pulvinar
-                  lobortis quis at magna.
-                </p>
-                <p>
-                  Nam condimentum commodo ligula, imperdiet auctor justo
-                  ultrices sed. Aenean nec nisi vestibulum turpis pulvinar
-                  lobortis quis at magna.
-                </p>
+                <p>{long_description}</p>
                 <div className="separator"></div>
                 <Row>
                   <Column>
-                    <p className="tag">
-                      <span>
-                        <HashtagIconCertified />
-                        Competence 1{' '}
-                      </span>
-                    </p>
-                    <p className="tag">
-                      <span>
-                        <HashtagIconCertified />
-                        Competence 2{' '}
-                      </span>
-                    </p>
-                    <p className="tag">
-                      <span>
-                        <HashtagIconCertified />
-                        Competence 3{' '}
-                      </span>
-                    </p>
-                    <p className="tag">
-                      <span>
-                        <HashtagIconCertified />
-                        Competence 4{' '}
-                      </span>
-                    </p>
+                    {competences.map(competence => {
+                      return (
+                        <p className="tag">
+                          <span>
+                            <HashtagIconCertified />
+                            {competence}
+                          </span>
+                        </p>
+                      )
+                    })}
                   </Column>
                 </Row>
               </>
             ) : (
               <>
                 <span className="title">Short Description</span>
-                <p>
-                  Nam condimentum commodo ligula, imperdiet auctor justo
-                  ultrices sed. Aenean nec nisi vestibulum turpis pulvinar
-                  lobortis quis at magna.
-                </p>
+                <p>{short_description}</p>
               </>
             )}
           </Column>
@@ -115,8 +104,8 @@ const FeedOpportunity: React.FC = () => {
               )}
             </div>
             <div className="right">
-              <Button url="/exam/code" type="exam" />
-              <Button url="/training/code" type="training" />
+              <Button url={`/exam/code/${exam}`} type="exam" />
+              <Button url={`/training/code?id=${trainings}`} type="training" />
             </div>
           </div>
         </Row>

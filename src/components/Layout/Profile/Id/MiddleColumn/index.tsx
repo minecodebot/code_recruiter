@@ -6,20 +6,9 @@ import TrainingPanel from '../../../../TrainingPanel'
 import { Container, Row } from './styles'
 import LoadingExamTrainingPanel from '../../../../Shimmer/LoadingExamTrainingPanel'
 
+import me from '../../../../../data/user/index.json'
+
 const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
-  const competences = [
-    ['Competence 1', false],
-    ['Competence 2', false],
-    ['Competence 3', false],
-    ['Competence 4', false],
-    ['Competence 5', true],
-    ['Competence 6', true]
-  ]
-  const completedTrainings = [
-    { title: 'Training Title 7', level: 'level' },
-    { title: 'Training Title 8', level: 'level' },
-    { title: 'Training Title 9', level: 'level' }
-  ]
   return (
     <Container className="middle-column">
       {isLoading ? (
@@ -30,9 +19,19 @@ const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
         </>
       ) : (
         <Row className="actions">
-          <ProfilePanel personalDataHidden={true} />
-          <SkillsPanel tags={competences} />
-          <TrainingPanel title="Completed" trainings={completedTrainings} />
+          <ProfilePanel
+            name={me.name}
+            surname={me.surname}
+            company={me.company}
+            carrer_path={me.carrer_path}
+            job_situation={me.job_situation}
+            job_title={me.job_title}
+            presentation_letter={me.presentation_letter}
+            avatar={me.avatar}
+            personalDataHidden={true}
+          />
+          <SkillsPanel tags={me.competences} />
+          <TrainingPanel title="Completed" trainings={me.completedTrainings} />
         </Row>
       )}
     </Container>

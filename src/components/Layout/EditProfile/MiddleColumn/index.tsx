@@ -3,6 +3,8 @@ import LoadingProfilePanel from '../../../Shimmer/LoadingProfilePanel'
 import ProfilePanelEdit from '../../../ProfilePanelEdit'
 import { Container, Row } from './styles'
 
+import me from '../../../../data/me/index.json'
+
 const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
   return (
     <Container className="middle-column">
@@ -12,7 +14,16 @@ const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
         </>
       ) : (
         <Row className="actions">
-          <ProfilePanelEdit />
+          <ProfilePanelEdit
+            name={me.name}
+            surname={me.surname}
+            company={me.company}
+            carrer_path={me.carrer_path}
+            job_situation={me.job_situation}
+            job_title={me.job_title}
+            presentation_letter={me.presentation_letter}
+            avatar={me.avatar}
+          />
         </Row>
       )}
     </Container>

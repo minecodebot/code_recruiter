@@ -3,6 +3,8 @@ import LoadingFeedOpportunity from '../../../Shimmer/LoadingFeedOpportunity'
 import FeedOpportunity from '../../../FeedOpportunity'
 import { Container } from './styles'
 
+import posts from '../../../../data/posts/index.json'
+
 const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
   return (
     <Container className="middle-column">
@@ -15,16 +17,24 @@ const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
         </>
       ) : (
         <>
-          <FeedOpportunity />
-          <FeedOpportunity />
-          <FeedOpportunity />
-          <FeedOpportunity />
-          <FeedOpportunity />
-          <FeedOpportunity />
-          <FeedOpportunity />
-          <FeedOpportunity />
-          <FeedOpportunity />
-          <FeedOpportunity />
+          {posts ? (
+            posts.map(post => {
+              return (
+                <FeedOpportunity
+                  title={post.title}
+                  company={post.company}
+                  post_date={post.post_date}
+                  short_description={post.short_description}
+                  long_description={post.long_description}
+                  competences={post.competences}
+                  exam={post.exam}
+                  trainings={post.trainings}
+                />
+              )
+            })
+          ) : (
+            <></>
+          )}
         </>
       )}
     </Container>

@@ -1,12 +1,12 @@
 import React from 'react'
 import Head from 'next/head'
-import { Container } from '../../styles/training/styles'
+import { Container } from '../../../../styles/training/styles'
 
 const Home: React.FC = () => {
   return (
     <Container>
       <Head>
-        <title>Training</title>
+        <title>Exam</title>
       </Head>
 
       <h1>Code Contest Instance</h1>

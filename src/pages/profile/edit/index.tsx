@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import LayoutEditProfile from '../../components/Layout/EditProfile'
+import LayoutEditProfile from '../../../components/Layout/EditProfile'
 
 const Trainings: React.FC = () => {
   return (

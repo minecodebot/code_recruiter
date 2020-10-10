@@ -10,6 +10,8 @@ import {
 } from './styles'
 import Avatar from 'avataaars'
 
+import me from '../../data/me/index.json'
+
 const Header: React.FC = () => {
   const router = useRouter()
 
@@ -51,16 +53,16 @@ const Header: React.FC = () => {
               }}
             >
               <Avatar
-                avatarStyle="Circle"
-                topType="LongHairStraight"
-                accessoriesType="Blank"
-                hairColor="BrownDark"
-                facialHairType="Blank"
-                clotheType="BlazerShirt"
-                eyeType="Default"
-                eyebrowType="Default"
-                mouthType="Default"
-                skinColor="Light"
+                avatarStyle={me.avatar.avatarStyle}
+                topType={me.avatar.topType}
+                accessoriesType={me.avatar.accessoriesType}
+                hairColor={me.avatar.hairColor}
+                facialHairType={me.avatar.facialHairType}
+                clotheType={me.avatar.clotheType}
+                eyeType={me.avatar.eyeType}
+                eyebrowType={me.avatar.eyebrowType}
+                mouthType={me.avatar.mouthType}
+                skinColor={me.avatar.skinColor}
                 style={{
                   width: '24px',
                   height: '24px'

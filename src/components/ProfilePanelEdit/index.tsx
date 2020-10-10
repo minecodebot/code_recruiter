@@ -6,7 +6,38 @@ import Button from '../Button'
 import Avatar from 'avataaars'
 import Modal from 'react-modal'
 
-const ProfilePanelEdit: React.FC = () => {
+export interface Props {
+  name: string
+  surname: string
+  company: string
+  carrer_path: string
+  job_situation: string
+  job_title: string
+  presentation_letter: string
+  avatar: {
+    avatarStyle: string
+    topType: string
+    accessoriesType: string
+    hairColor: string
+    facialHairType: string
+    clotheType: string
+    eyeType: string
+    eyebrowType: string
+    mouthType: string
+    skinColor: string
+  }
+}
+
+const ProfilePanelEdit: React.FC<Props> = ({
+  name,
+  surname,
+  company,
+  carrer_path,
+  job_situation,
+  job_title,
+  presentation_letter,
+  avatar
+}) => {
   const router = useRouter()
 
   const handleSubmit = event => {
@@ -144,44 +175,64 @@ const ProfilePanelEdit: React.FC = () => {
             }}
           >
             <Avatar
-              avatarStyle="Circle"
-              topType="LongHairStraight"
-              accessoriesType="Blank"
-              hairColor="BrownDark"
-              facialHairType="Blank"
-              clotheType="BlazerShirt"
-              eyeType="Default"
-              eyebrowType="Default"
-              mouthType="Default"
-              skinColor="Light"
+              avatarStyle={avatar.avatarStyle}
+              topType={avatar.topType}
+              accessoriesType={avatar.accessoriesType}
+              hairColor={avatar.hairColor}
+              facialHairType={avatar.facialHairType}
+              clotheType={avatar.clotheType}
+              eyeType={avatar.eyeType}
+              eyebrowType={avatar.eyebrowType}
+              mouthType={avatar.mouthType}
+              skinColor={avatar.skinColor}
             />
           </button>
           <div className="key-value">
             <label htmlFor="name" className="key">
               Name:
             </label>
-            <input type="text" className="value" id="name" />
+            <input
+              type="text"
+              className="value"
+              id="name"
+              defaultValue={name}
+            />
           </div>
 
           <div className="key-value">
             <label htmlFor="surname" className="key">
               Surname:
             </label>
-            <input type="text" className="value" id="surname" />
+            <input
+              type="text"
+              className="value"
+              id="surname"
+              defaultValue={surname}
+            />
           </div>
 
           <div className="key-value">
             <label htmlFor="jobTitle" className="key">
               Job title:
             </label>
-            <input type="text" className="value" id="jobTitle" />
+            <input
+              type="text"
+              className="value"
+              id="jobTitle"
+              defaultValue={job_title}
+            />
           </div>
 
           <div className="key-value">
             <label htmlFor="company" className="key">
               Company:
             </label>
-            <input type="text" className="value" id="company" />
+            <input
+              type="text"
+              className="value"
+              id="company"
+              defaultValue={company}
+            />
           </div>
 
           <div className="separator"></div>
@@ -191,10 +242,21 @@ const ProfilePanelEdit: React.FC = () => {
               Carrer Path:
             </label>
             <select id="carrerPath" className="value">
-              <option value="frontend">Frontend</option>
-              <option value="backend">Backend</option>
-              <option value="fullstack">Fullstack</option>
-              <option value="softwareEngineer">Software Engineer</option>
+              <option value="Frontend" selected={carrer_path === 'Frontend'}>
+                Frontend
+              </option>
+              <option value="Backend" selected={carrer_path === 'Backend'}>
+                Backend
+              </option>
+              <option value="Fullstack" selected={carrer_path === 'Fullstack'}>
+                Fullstack
+              </option>
+              <option
+                value="Software Engineer"
+                selected={carrer_path === 'Software Engineer'}
+              >
+                Software Engineer
+              </option>
             </select>
           </div>
           <div className="key-value">
@@ -202,9 +264,24 @@ const ProfilePanelEdit: React.FC = () => {
               Job Situation:
             </label>
             <select id="jobSituation" className="value">
-              <option value="open">Open to new opportunity</option>
-              <option value="searching">Itensive searching</option>
-              <option value="notOpen">Not available to new opportunity</option>
+              <option
+                value="Open to new opportunity"
+                selected={job_situation === 'Open to new opportunity'}
+              >
+                Open to new opportunity
+              </option>
+              <option
+                value="Itensive searching"
+                selected={job_situation === 'Itensive searching'}
+              >
+                Itensive searching
+              </option>
+              <option
+                value="Not available to new opportunity"
+                selected={job_situation === 'Not available to new opportunity'}
+              >
+                Not available to new opportunity
+              </option>
             </select>
           </div>
 
@@ -219,6 +296,7 @@ const ProfilePanelEdit: React.FC = () => {
             <textarea
               className="value value-all"
               id="selftPresentationLetter"
+              defaultValue={presentation_letter}
             />
           </div>
         </Panel>

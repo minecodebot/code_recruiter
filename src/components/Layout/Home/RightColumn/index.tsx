@@ -6,25 +6,9 @@ import TrainingPanel from '../../../TrainingPanel'
 import { Container } from './styles'
 import LoadingExamTrainingPanel from '../../../Shimmer/LoadingExamTrainingPanel'
 
+import me from '../../../../data/me/index.json'
+
 const RightColumn: React.FC<LoadingProps> = ({ isLoading }) => {
-  const competences = [
-    ['Competence 1', false],
-    ['Competence 2', false],
-    ['Competence 3', false],
-    ['Competence 4', false],
-    ['Competence 5', true],
-    ['Competence 6', true]
-  ]
-  const suggestedTrainings = [
-    { title: 'Training Title 7', level: 'level' },
-    { title: 'Training Title 8', level: 'level' },
-    { title: 'Training Title 9', level: 'level' }
-  ]
-  const completedTrainings = [
-    { title: 'Training Title 7', level: 'level' },
-    { title: 'Training Title 8', level: 'level' },
-    { title: 'Training Title 9', level: 'level' }
-  ]
   return (
     <Container className="left-column">
       {isLoading ? (
@@ -34,13 +18,25 @@ const RightColumn: React.FC<LoadingProps> = ({ isLoading }) => {
           <LoadingExamTrainingPanel />
           <LoadingExamTrainingPanel />
         </>
-      ) : (
+      ) : me ? (
         <>
-          <ProfilePanel short={true} />
-          <SkillsPanel tags={competences} />
-          <TrainingPanel title="Completed" trainings={completedTrainings} />
-          <TrainingPanel title="Suggested" trainings={suggestedTrainings} />
+          <ProfilePanel
+            name={me.name}
+            surname={me.surname}
+            company={me.company}
+            carrer_path={me.carrer_path}
+            job_situation={me.job_situation}
+            job_title={me.job_title}
+            presentation_letter={me.presentation_letter}
+            avatar={me.avatar}
+            short={true}
+          />
+          <SkillsPanel tags={me.competences} />
+          <TrainingPanel title="Completed" trainings={me.completedTrainings} />
+          <TrainingPanel title="Suggested" trainings={me.suggestedTrainings} />
         </>
+      ) : (
+        <></>
       )}
     </Container>
   )
