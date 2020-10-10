@@ -27,7 +27,11 @@ jobs:
 
       - name: Build project
         run: yarn build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /code_recruiter
       - run: yarn export
+        env:
+          NEXT_PUBLIC_BASE_PATH: /code_recruiter
       - run: touch ./out/.nojekyll
 
       - name: Deploy
