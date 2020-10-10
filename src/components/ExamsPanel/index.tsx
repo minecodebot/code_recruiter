@@ -2,51 +2,18 @@ import React from 'react'
 import Panel from '../Panel'
 import { Column, Container, Row } from '../../styles/GlobalStyles'
 import Button from '../Button'
-const ExamsPanel: React.FC = () => {
-  const exams = [
-    {
-      title: 'Training Title 1',
-      description: 'Some text here',
-      date: '12/10/2020',
-      level: 'level',
-      status: 'success'
-    },
-    {
-      title: 'Training Title 2',
-      description: 'Some text here',
-      date: '12/10/2020',
-      level: 'level',
-      status: 'success'
-    },
-    {
-      title: 'Training Title 3',
-      description: 'Some text here',
-      date: '12/10/2020',
-      level: 'level',
-      status: 'fail'
-    },
-    {
-      title: 'Training Title 4',
-      description: 'Some text here',
-      date: '12/10/2020',
-      level: 'level',
-      status: 'evaluation'
-    },
-    {
-      title: 'Training Title 5',
-      description: 'Some text here',
-      date: '12/10/2020',
-      level: 'level',
-      status: 'success'
-    },
-    {
-      title: 'Training Title 6',
-      description: 'Some text here',
-      date: '12/10/2020',
-      level: 'level',
-      status: 'fail'
-    }
-  ]
+
+export interface Props {
+  exams: {
+    title: string
+    description: string
+    date: string
+    level: string
+    status: string
+  }[]
+}
+
+const ExamsPanel: React.FC<Props> = ({ exams }) => {
   return (
     <Container>
       <Panel>

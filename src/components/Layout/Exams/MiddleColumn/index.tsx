@@ -3,6 +3,8 @@ import ExamsPanel from '../../../ExamsPanel'
 import { Container, Row } from './styles'
 import LoadingExamTrainingPanel from '../../../Shimmer/LoadingExamTrainingPanel'
 
+import me from '../../../../data/me/index.json'
+
 const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
   return (
     <Container className="middle-column">
@@ -10,7 +12,7 @@ const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
         <LoadingExamTrainingPanel />
       ) : (
         <Row className="actions">
-          <ExamsPanel />
+          <ExamsPanel exams={me.exams} />
         </Row>
       )}
     </Container>
