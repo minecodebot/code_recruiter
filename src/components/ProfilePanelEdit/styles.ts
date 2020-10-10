@@ -11,17 +11,12 @@ export const Container = styled.div`
     background: var(--color-background);
   }
   .profile-picture {
-    width: 72px;
-    height: 72px;
-    /* border-radius: 50%;
-    border: 2px solid var(--color-background);
-    box-shadow: inset 0 1.5px 3px 0 var(--black-a15, rgba(0, 0, 0, 0.15)),
-      0 1.5px 3px 0 var(--black-a15, rgba(0, 0, 0, 0.15)); */
-  }
-  .profile-picture:not(.list) {
+    width: 92px;
+    height: 92px;
     margin: -38px auto 12px;
     display: flex;
   }
+
   h1 {
     font-size: 16px;
     font-weight: 600;

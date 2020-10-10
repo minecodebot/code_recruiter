@@ -3,9 +3,8 @@ import Panel from '../Panel'
 import { useRouter } from 'next/router'
 import { Container } from './styles'
 import Button from '../Button'
-import Avatars from '../../assets/Avatares'
+import Avatar from 'avataaars'
 import Modal from 'react-modal'
-import Avatar1 from '../../assets/Avatares/Avatar1'
 
 const ProfilePanelEdit: React.FC = () => {
   const router = useRouter()
@@ -28,6 +27,77 @@ const ProfilePanelEdit: React.FC = () => {
       transform: 'translate(-50%, -50%)'
     }
   }
+
+  const avatars = [
+    {
+      avatarStyle: 'Circle',
+      topType: 'LongHairStraight',
+      accessoriesType: 'Blank',
+      hairColor: 'BrownDark',
+      facialHairType: 'Blank',
+      clotheType: 'BlazerShirt',
+      eyeType: 'Default',
+      eyebrowType: 'Default',
+      mouthType: 'Default',
+      skinColor: 'Light'
+    },
+    {
+      avatarStyle: 'Circle',
+      topType: 'Eyepatch',
+      accessoriesType: 'Round',
+      hairColor: 'Black',
+      facialHairType: 'Blank',
+      facialHairColor: 'Black',
+      clotheType: 'ShirtCrewNeck',
+      clotheColor: 'Black',
+      eyeType: 'Happy',
+      eyebrowType: 'Default',
+      mouthType: 'Twinkle',
+      skinColor: 'Tanned'
+    },
+    {
+      avatarStyle: 'Circle',
+      topType: 'ShortHairDreads01',
+      accessoriesType: 'Prescription02',
+      hairColor: 'Auburn',
+      facialHairType: 'BeardMagestic',
+      facialHairColor: 'Auburn',
+      clotheType: 'ShirtScoopNeck',
+      clotheColor: 'Heather',
+      eyeType: 'Wink',
+      eyebrowType: 'SadConcernedNatural',
+      mouthType: 'Smile',
+      skinColor: 'Brown'
+    },
+    {
+      avatarStyle: 'Circle',
+      topType: 'ShortHairTheCaesarSidePart',
+      accessoriesType: 'Blank',
+      hairColor: 'BlondeGolden',
+      facialHairType: 'BeardMedium',
+      facialHairColor: 'BrownDark',
+      clotheType: 'ShirtCrewNeck',
+      clotheColor: 'PastelOrange',
+      eyeType: 'EyeRoll',
+      eyebrowType: 'RaisedExcited',
+      mouthType: 'Tongue',
+      skinColor: 'Black'
+    },
+    {
+      avatarStyle: 'Circle',
+      topType: 'LongHairFroBand',
+      accessoriesType: 'Wayfarers',
+      hairColor: 'Auburn',
+      facialHairType: 'BeardLight',
+      facialHairColor: 'Black',
+      clotheType: 'BlazerShirt',
+      clotheColor: 'White',
+      eyeType: 'Default',
+      eyebrowType: 'SadConcernedNatural',
+      mouthType: 'Sad',
+      skinColor: 'Tanned'
+    }
+  ]
   return (
     <Container>
       <Modal
@@ -38,7 +108,30 @@ const ProfilePanelEdit: React.FC = () => {
         contentLabel="Modal"
         style={customStyles}
       >
-        <Avatars />
+        {avatars.map(element => {
+          console.log(element)
+          return (
+            <button
+              className="profile-picture"
+              onClick={() => {
+                setIsOpen(false)
+              }}
+            >
+              <Avatar
+                avatarStyle={element.avatarStyle}
+                topType={element.topType}
+                accessoriesType={element.accessoriesType}
+                hairColor={element.hairColor}
+                facialHairType={element.facialHairType}
+                clotheType={element.clotheType}
+                eyeType={element.eyeType}
+                eyebrowType={element.eyebrowType}
+                mouthType={element.mouthType}
+                skinColor={element.skinColor}
+              />
+            </button>
+          )
+        })}
       </Modal>
       <form onSubmit={handleSubmit}>
         <Panel>
@@ -50,7 +143,18 @@ const ProfilePanelEdit: React.FC = () => {
               setIsOpen(true)
             }}
           >
-            <Avatar1 />
+            <Avatar
+              avatarStyle="Circle"
+              topType="LongHairStraight"
+              accessoriesType="Blank"
+              hairColor="BrownDark"
+              facialHairType="Blank"
+              clotheType="BlazerShirt"
+              eyeType="Default"
+              eyebrowType="Default"
+              mouthType="Default"
+              skinColor="Light"
+            />
           </button>
           <div className="key-value">
             <label htmlFor="name" className="key">

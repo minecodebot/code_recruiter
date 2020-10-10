@@ -17,6 +17,12 @@ export default createGlobalStyle`
     font-family: -apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif;
   }
 
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
   input, textarea, select {
     border: none;
     background-color: var(--color-medium);

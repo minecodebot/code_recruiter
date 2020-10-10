@@ -10,17 +10,7 @@ export const Container = styled.div`
     height: 54px;
     background: var(--color-background);
   }
-  .profile-picture {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    border: 2px solid var(--color-background);
-    box-shadow: inset 0 1.5px 3px 0 var(--black-a15, rgba(0, 0, 0, 0.15)),
-      0 1.5px 3px 0 var(--black-a15, rgba(0, 0, 0, 0.15));
 
-    display: flex;
-    margin: -38px auto 12px;
-  }
   h1 {
     font-size: 16px;
     font-weight: 600;

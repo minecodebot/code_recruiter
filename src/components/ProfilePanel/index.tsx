@@ -1,13 +1,13 @@
 import React from 'react'
 import Panel from '../Panel'
 import { Container } from './styles'
+import Avatar from 'avataaars'
 import {
   uniqueNamesGenerator,
   Config,
   names,
   starWars
 } from 'unique-names-generator'
-import UserAvatar from 'react-user-avatar'
 export interface Props {
   personalDataHidden?: boolean
   short?: boolean
@@ -29,11 +29,23 @@ const ProfilePanel: React.FC<Props> = ({ personalDataHidden, short }) => {
     <Container>
       <Panel>
         <div className="profile-cover"></div>
-        <UserAvatar
-          size="72"
-          className="profile-picture"
-          alt="Avatar"
-          name={name}
+        <Avatar
+          avatarStyle="Circle"
+          topType="LongHairStraight"
+          accessoriesType="Blank"
+          hairColor="BrownDark"
+          facialHairType="Blank"
+          clotheType="BlazerShirt"
+          eyeType="Default"
+          eyebrowType="Default"
+          mouthType="Default"
+          skinColor="Light"
+          style={{
+            width: '92px',
+            height: '92px',
+            margin: '-38px auto 12px',
+            display: 'flex'
+          }}
         />
         <h1>{name}</h1>
         {personalDataHidden ? <></> : <h2>Job Title @ Company</h2>}

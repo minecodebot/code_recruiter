@@ -8,7 +8,7 @@ import {
   TrainingIcon,
   ExamIcon
 } from './styles'
-import UserAvatar from 'react-user-avatar'
+import Avatar from 'avataaars'
 
 const Header: React.FC = () => {
   const router = useRouter()
@@ -50,11 +50,21 @@ const Header: React.FC = () => {
                 router.push('/profile/me')
               }}
             >
-              <UserAvatar
-                size="24"
-                className="profile-picture"
-                alt="Avatar"
-                name="Name Surname"
+              <Avatar
+                avatarStyle="Circle"
+                topType="LongHairStraight"
+                accessoriesType="Blank"
+                hairColor="BrownDark"
+                facialHairType="Blank"
+                clotheType="BlazerShirt"
+                eyeType="Default"
+                eyebrowType="Default"
+                mouthType="Default"
+                skinColor="Light"
+                style={{
+                  width: '24px',
+                  height: '24px'
+                }}
               />
               <span>Me</span>
             </button>
