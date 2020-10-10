@@ -8,6 +8,7 @@ import {
   names,
   starWars
 } from 'unique-names-generator'
+import Link from 'next/link'
 export interface Props {
   name: string
   surname: string
@@ -77,10 +78,12 @@ const ProfilePanel: React.FC<Props> = ({
             display: 'flex'
           }}
         />
-        <h1>
-          {name}
-          {surname.length > 0 ? ' ' + surname : ''}
-        </h1>
+        <Link href="/profile/user/[id]" as={`/profile/user/1`}>
+          <h1>
+            {name}
+            {surname.length > 0 ? ' ' + surname : ''}
+          </h1>
+        </Link>
         {personalDataHidden ? (
           <></>
         ) : (
