@@ -30,7 +30,7 @@ export default createGlobalStyle`
   }
 
   :root {
-    --color-header: #D62828;
+    --color-header: #001B29;
     --color-background: #000D14;
     --color-dark: #001B29;
     --color-medium: #00293D;

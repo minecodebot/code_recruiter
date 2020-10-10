@@ -7,7 +7,7 @@ import posts from '../../../../data/posts/index.json'
 
 const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
   return (
-    <Container className="middle-column">
+    <Container className="left-column">
       {isLoading ? (
         <>
           <LoadingFeedOpportunity />

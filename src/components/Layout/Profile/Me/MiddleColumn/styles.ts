@@ -2,11 +2,8 @@ import styled, { css } from 'styled-components'
 import { FcSupport } from 'react-icons/fc'
 
 export const Container = styled.div`
-  @media (min-width: 1180px) {
-    width: calc(100vh - 300px);
-  }
-
   height: 100vh;
+  width: 100vh;
 
   overflow-y: scroll;
 
@@ -15,8 +12,6 @@ export const Container = styled.div`
   }
   -ms-overflow-style: none;
   scrollbar-width: none;
-
-  max-height: calc(100vh - 120px);
 `
 
 export const Row = styled.div`

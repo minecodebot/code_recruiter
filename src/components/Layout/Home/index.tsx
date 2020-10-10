@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import MiddleColumn from './MiddleColumn'
+import MiddleColumn from './LeftColumn'
 import RightColumn from './RightColumn'
 import TwoColumns from '../TwoColumns'
 

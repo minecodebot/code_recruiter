@@ -18,7 +18,7 @@ export const Container = styled.div`
     > main {
       margin: 0 30px;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
     }
   }
 
@@ -35,8 +35,12 @@ export const Container = styled.div`
       display: unset;
     }
 
-    .middle-column {
+    .left-column {
       margin: 0 25px;
+    }
+
+    .middle-column {
+      margin: 0 auto;
     }
   }
 `
