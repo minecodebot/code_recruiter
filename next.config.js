@@ -5,22 +5,7 @@ module.exports = withImages({
   esModule: true,
 })
 
-
-// module.exports = {
-//   entry: './src/_app.tsx',
-//   module: {
-//     rules: [
-//       //...
-//       {
-//         test: /\.(png|jp(e*)g|svg|gif)$/,
-//         use: [{
-//           loader: 'file-loader',
-//           options: {
-//             name: 'images/[hash]-[name].[ext]',
-//           },
-//         }, ],
-//       },
-//     ],
-//   },
-//   //...
-// };
+module.exports = {
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH,
+  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH
+}
