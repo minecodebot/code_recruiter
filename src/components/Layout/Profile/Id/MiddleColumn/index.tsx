@@ -10,7 +10,7 @@ import users from '../../../../../data/users/index.json'
 
 const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
   const { query } = useRouter()
-  const user = users.find(user => user.id.toString() === query.slug)
+  const user = users.find(user => user.id.toString() === query.id)
 
   return (
     <Container className="middle-column">

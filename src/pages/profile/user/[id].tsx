@@ -21,7 +21,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const paths = users.map(user => {
     return {
       params: {
-        slug: user.id.toString()
+        id: user.id.toString()
       }
     }
   })
@@ -33,11 +33,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async context => {
-  const { slug } = context.params
+  const { id } = context.params
 
   return {
     props: {
-      user: users.find(user => user.id.toString() === slug)
+      user: users.find(user => user.id.toString() === id)
     }
   }
 }
