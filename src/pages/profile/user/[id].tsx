@@ -3,14 +3,17 @@ import Head from 'next/head'
 import LayoutProfileId from '../../../components/Layout/Profile/Id'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import users from '../../../data/users/index.json'
+import { useRouter } from 'next/router'
 
 const Trainings: React.FC = () => {
+  const { isFallback } = useRouter()
+
   return (
     <>
       <Head>
         <title>Job Search Plataform - User Profile</title>
       </Head>
-      <LayoutProfileId />
+      <LayoutProfileId isLoading={isFallback} />
     </>
   )
 }
