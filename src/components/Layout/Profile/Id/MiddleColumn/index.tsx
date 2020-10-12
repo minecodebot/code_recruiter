@@ -8,7 +8,11 @@ import LoadingExamTrainingPanel from '../../../../Shimmer/LoadingExamTrainingPan
 import { useRouter } from 'next/router'
 import users from '../../../../../data/users/index.json'
 
-const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
+export interface Props {
+  isLoading: boolean
+}
+
+const MiddleColumn: React.FC<Props> = ({ isLoading }) => {
   const { query } = useRouter()
   const user = users.find(user => user.id.toString() === query.id)
 

@@ -3,9 +3,21 @@ import LoadingFeedOpportunity from '../../../Shimmer/LoadingFeedOpportunity'
 import FeedOpportunity from '../../../FeedOpportunity'
 import { Container } from './styles'
 
-import posts from '../../../../data/posts/index.json'
+export interface Props {
+  isLoading: boolean
+  posts: {
+    title: string
+    company: string
+    post_date: string
+    short_description: string
+    long_description: string
+    competences: string[]
+    exam: number
+    trainings: number[]
+  }[]
+}
 
-const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
+const MiddleColumn: React.FC<Props> = ({ isLoading, posts }) => {
   return (
     <Container className="left-column">
       {isLoading ? (

@@ -18,6 +18,8 @@ const OneColumn = Column => {
 
   interface Props {
     isLoading: boolean
+    me?: Object
+    trainings?: Object
   }
 
   return class extends React.Component<Props> {

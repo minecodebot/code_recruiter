@@ -7,6 +7,7 @@ import { Container } from '../styles'
 export interface Props {
   Column: React.FC
 }
+
 const TwoColumns = (MiddleColumn, RightColumn) => {
   const [isLoading, setLoading] = useState(true)
 
@@ -18,6 +19,8 @@ const TwoColumns = (MiddleColumn, RightColumn) => {
 
   interface Props {
     isLoading: boolean
+    me?: Object
+    posts?: Object
   }
 
   return class extends React.Component<Props> {
