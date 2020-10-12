@@ -78,12 +78,10 @@ const ProfilePanel: React.FC<Props> = ({
             display: 'flex'
           }}
         />
-        <Link href="/profile/user/1">
-          <h1>
-            {name}
-            {surname.length > 0 ? ' ' + surname : ''}
-          </h1>
-        </Link>
+        <h1>
+          {name}
+          {surname.length > 0 ? ' ' + surname : ''}
+        </h1>
         {personalDataHidden ? (
           <></>
         ) : (
