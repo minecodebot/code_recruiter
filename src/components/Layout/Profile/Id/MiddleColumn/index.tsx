@@ -5,14 +5,13 @@ import SkillsPanel from '../../../../SkillsPanel'
 import TrainingPanel from '../../../../TrainingPanel'
 import { Container, Row } from './styles'
 import LoadingExamTrainingPanel from '../../../../Shimmer/LoadingExamTrainingPanel'
+import { useRouter } from 'next/router'
+import users from '../../../../../data/users/index.json'
 
-import me from '../../../../../data/user/index.json'
+const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
+  const { query } = useRouter()
+  const user = users.find(user => user.id.toString() === query.slug)
 
-export interface Props {
-  user: string | string[]
-}
-
-const MiddleColumn: React.FC<LoadingProps & Props> = ({ isLoading, user }) => {
   return (
     <Container className="middle-column">
       {isLoading ? (
@@ -23,20 +22,22 @@ const MiddleColumn: React.FC<LoadingProps & Props> = ({ isLoading, user }) => {
         </>
       ) : (
         <Row className="actions">
-          <h1>{user}</h1>
           <ProfilePanel
-            name={me.name}
-            surname={me.surname}
-            company={me.company}
-            carrer_path={me.carrer_path}
-            job_situation={me.job_situation}
-            job_title={me.job_title}
-            presentation_letter={me.presentation_letter}
-            avatar={me.avatar}
+            name={user.name}
+            surname={user.surname}
+            company={user.company}
+            carrer_path={user.carrer_path}
+            job_situation={user.job_situation}
+            job_title={user.job_title}
+            presentation_letter={user.presentation_letter}
+            avatar={user.avatar}
             personalDataHidden={true}
           />
-          <SkillsPanel tags={me.competences} />
-          <TrainingPanel title="Completed" trainings={me.completedTrainings} />
+          <SkillsPanel tags={user.competences} />
+          <TrainingPanel
+            title="Completed"
+            trainings={user.completedTrainings}
+          />
         </Row>
       )}
     </Container>

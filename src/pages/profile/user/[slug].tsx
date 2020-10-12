@@ -1,18 +1,43 @@
 import React from 'react'
 import Head from 'next/head'
 import LayoutProfileId from '../../../components/Layout/Profile/Id'
-import { useRouter } from 'next/router'
+import { GetStaticPaths, GetStaticProps } from 'next'
+import users from '../../../data/users/index.json'
 
 const Trainings: React.FC = () => {
-  const { query } = useRouter()
   return (
     <>
       <Head>
         <title>Job Search Plataform - User Profile</title>
       </Head>
-      <LayoutProfileId user={query.user} />
+      <LayoutProfileId />
     </>
   )
 }
 
 export default Trainings
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = users.map(user => {
+    return {
+      params: {
+        slug: user.id.toString()
+      }
+    }
+  })
+
+  return {
+    paths,
+    fallback: false
+  }
+}
+
+export const getStaticProps: GetStaticProps = async context => {
+  const { slug } = context.params
+
+  return {
+    props: {
+      user: users.find(user => user.id.toString() === slug)
+    }
+  }
+}

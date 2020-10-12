@@ -18,7 +18,6 @@ const OneColumn = Column => {
 
   interface Props {
     isLoading: boolean
-    user?: string | string[]
   }
 
   return class extends React.Component<Props> {
