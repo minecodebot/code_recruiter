@@ -1,6 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import MiddleColumn from './MiddleColumn'
-import OneColumn from '../../OneColumn'
+import MobileHeader from '../../../MobileHeader'
+import DesktopHeader from '../../../DesktopHeader'
+import AdBanner from '../../../AdBanner'
+import { Container } from '../../styles'
 
 export interface Props {
   isLoading: boolean
@@ -46,9 +49,18 @@ export interface Props {
 }
 
 const LayoutProfileMe: React.FC<Props> = ({ isLoading, me }) => {
-  const Column = OneColumn(MiddleColumn)
+  return (
+    <Container>
+      <MobileHeader />
+      <DesktopHeader isLoading={isLoading} me={me} />
 
-  return <Column isLoading={isLoading} me={me} />
+      <span>{!isLoading && <AdBanner />}</span>
+
+      <main>
+        <MiddleColumn isLoading={isLoading} me={me} />
+      </main>
+    </Container>
+  )
 }
 
 export default LayoutProfileMe

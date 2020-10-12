@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import MiddleColumn from './LeftColumn'
+import React from 'react'
+import LeftColumn from './LeftColumn'
 import RightColumn from './RightColumn'
-import TwoColumns from '../TwoColumns'
+import MobileHeader from '../../MobileHeader'
+import DesktopHeader from '../../DesktopHeader'
+import AdBanner from '../../AdBanner'
+import { Container } from '../styles'
 
 export interface Props {
   isLoading: boolean
@@ -57,9 +60,19 @@ export interface Props {
 }
 
 const LayoutHome: React.FC<Props> = ({ isLoading, me, posts }) => {
-  const Columns = TwoColumns(MiddleColumn, RightColumn)
+  return (
+    <Container>
+      <MobileHeader />
+      <DesktopHeader isLoading={isLoading} me={me} />
 
-  return <Columns isLoading={isLoading} me={me} posts={posts} />
+      <span>{!isLoading && <AdBanner />}</span>
+
+      <main>
+        <LeftColumn isLoading={isLoading} posts={posts} />
+        <RightColumn isLoading={isLoading} me={me} />
+      </main>
+    </Container>
+  )
 }
 
 export default LayoutHome
