@@ -18,17 +18,17 @@ const Trainings: React.FC = () => {
 export default Trainings
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = users.map(user => {
-    return {
-      params: {
-        id: user.id.toString()
-      }
-    }
-  })
+  // const paths = users.map(user => {
+  //   return {
+  //     params: {
+  //       id: user.id.toString()
+  //     }
+  //   }
+  // })
 
   return {
-    paths,
-    fallback: false
+    paths: [],
+    fallback: true
   }
 }
 
