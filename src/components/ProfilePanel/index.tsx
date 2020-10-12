@@ -78,7 +78,7 @@ const ProfilePanel: React.FC<Props> = ({
             display: 'flex'
           }}
         />
-        <Link href="/profile/user/[id]" as={`/profile/user/1`}>
+        <Link href="/profile/user/1">
           <h1>
             {name}
             {surname.length > 0 ? ' ' + surname : ''}
