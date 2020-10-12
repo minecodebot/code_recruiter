@@ -8,7 +8,11 @@ import LoadingExamTrainingPanel from '../../../../Shimmer/LoadingExamTrainingPan
 
 import me from '../../../../../data/user/index.json'
 
-const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
+export interface Props {
+  user: string
+}
+
+const MiddleColumn: React.FC<LoadingProps & Props> = ({ isLoading, user }) => {
   return (
     <Container className="middle-column">
       {isLoading ? (
@@ -19,6 +23,7 @@ const MiddleColumn: React.FC<LoadingProps> = ({ isLoading }) => {
         </>
       ) : (
         <Row className="actions">
+          <h1>{user}</h1>
           <ProfilePanel
             name={me.name}
             surname={me.surname}

@@ -2,7 +2,11 @@ import React, { useState, useEffect } from 'react'
 import MiddleColumn from './MiddleColumn'
 import OneColumn from '../../OneColumn'
 
-const LayoutProfileId: React.FC = () => {
+export interface Props {
+  user: string
+}
+
+const LayoutProfileId: React.FC<Props> = ({ user }) => {
   const [isLoading, setLoading] = useState(true)
   const Column = OneColumn(MiddleColumn)
 
@@ -12,7 +16,7 @@ const LayoutProfileId: React.FC = () => {
     }, 1000)
   }, [])
 
-  return <Column isLoading={isLoading} />
+  return <Column isLoading={isLoading} user={user} />
 }
 
 export default LayoutProfileId
