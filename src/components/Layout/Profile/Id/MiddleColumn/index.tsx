@@ -9,7 +9,7 @@ import LoadingExamTrainingPanel from '../../../../Shimmer/LoadingExamTrainingPan
 import me from '../../../../../data/user/index.json'
 
 export interface Props {
-  user: string
+  user: string | string[]
 }
 
 const MiddleColumn: React.FC<LoadingProps & Props> = ({ isLoading, user }) => {

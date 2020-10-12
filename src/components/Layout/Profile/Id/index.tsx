@@ -3,7 +3,7 @@ import MiddleColumn from './MiddleColumn'
 import OneColumn from '../../OneColumn'
 
 export interface Props {
-  user: string
+  user: string | string[]
 }
 
 const LayoutProfileId: React.FC<Props> = ({ user }) => {
