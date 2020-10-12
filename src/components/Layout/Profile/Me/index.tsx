@@ -3,6 +3,7 @@ import MiddleColumn from './MiddleColumn'
 import OneColumn from '../../OneColumn'
 
 export interface Props {
+  isLoading: boolean
   me: {
     name: string
     surname: string
@@ -44,15 +45,8 @@ export interface Props {
   }
 }
 
-const LayoutProfileMe: React.FC<Props> = ({ me }) => {
-  const [isLoading, setLoading] = useState(true)
+const LayoutProfileMe: React.FC<Props> = ({ isLoading, me }) => {
   const Column = OneColumn(MiddleColumn)
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false)
-    }, 1000)
-  }, [])
 
   return <Column isLoading={isLoading} me={me} />
 }

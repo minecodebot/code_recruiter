@@ -4,6 +4,7 @@ import RightColumn from './RightColumn'
 import TwoColumns from '../TwoColumns'
 
 export interface Props {
+  isLoading: boolean
   me: {
     name: string
     surname: string
@@ -55,15 +56,8 @@ export interface Props {
   }[]
 }
 
-const LayoutHome: React.FC<Props> = ({ me, posts }) => {
-  const [isLoading, setLoading] = useState(true)
+const LayoutHome: React.FC<Props> = ({ isLoading, me, posts }) => {
   const Columns = TwoColumns(MiddleColumn, RightColumn)
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false)
-    }, 1000)
-  }, [])
 
   return <Columns isLoading={isLoading} me={me} posts={posts} />
 }

@@ -4,14 +4,17 @@ import LayoutTrainings from '../../components/Layout/Trainings'
 import me from '../../data/me/index.json'
 import trainings from '../../data/trainings/index.json'
 import { GetStaticProps } from 'next'
+import { useRouter } from 'next/router'
 
 const Trainings: React.FC = () => {
+  const { isFallback } = useRouter()
+
   return (
     <>
       <Head>
         <title>Job Search Plataform - Trainings</title>
       </Head>
-      <LayoutTrainings me={me} trainings={trainings} />
+      <LayoutTrainings isLoading={isFallback} me={me} trainings={trainings} />
     </>
   )
 }
