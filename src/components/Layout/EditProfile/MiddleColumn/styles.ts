@@ -1,16 +1,16 @@
 import styled, { css } from 'styled-components'
 import { FcSimCard } from 'react-icons/fc'
 export const Container = styled.div`
-  height: 100vh;
+  /* height: 100vh; */
   width: 100vh;
 
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 
-  ::-webkit-scrollbar {
-    display: none;
-  }
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  /* ::-webkit-scrollbar { */
+  /* display: none; */
+  /* } */
+  /* -ms-overflow-style: none; */
+  /* scrollbar-width: none; */
 `
 
 export const Row = styled.div`

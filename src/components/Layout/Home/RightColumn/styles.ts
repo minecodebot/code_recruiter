@@ -13,4 +13,8 @@ export const Container = styled.div`
   scrollbar-width: none;
 
   max-height: calc(100vh - 120px);
+
+  position: fixed;
+  top: 102px;
+  margin-left: calc(100vh + 50px) !important;
 `
