@@ -2,10 +2,11 @@ import React from 'react'
 import Panel from '../Panel'
 import { Column, Container, Row } from '../../styles/GlobalStyles'
 import Button from '../Button'
+import { trainingInterface } from '../Interface'
 
 export interface Props {
   title: string
-  trainings: { id: number; title: string; level: string }[]
+  trainings: trainingInterface[]
 }
 
 const TrainingPanel: React.FC<Props> = ({ title, trainings }) => {

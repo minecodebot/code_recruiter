@@ -2,15 +2,10 @@ import React from 'react'
 import Panel from '../Panel'
 import { Column, Container, Row } from '../../styles/GlobalStyles'
 import Button from '../Button'
+import { examInterface } from '../Interface'
 
 export interface Props {
-  exams: {
-    title: string
-    description: string
-    date: string
-    level: string
-    status: string
-  }[]
+  exams: examInterface[]
 }
 
 const ExamsPanel: React.FC<Props> = ({ exams }) => {

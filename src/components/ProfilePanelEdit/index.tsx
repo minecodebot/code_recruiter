@@ -42,7 +42,6 @@ const ProfilePanelEdit: React.FC<Props> = ({
 
   const handleSubmit = event => {
     router.push('/profile/me')
-    console.log(event)
     event.preventDefault()
   }
 

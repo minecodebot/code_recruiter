@@ -54,3 +54,11 @@ export interface trainingInterface {
   title: string
   level: string
 }
+
+export interface examInterface {
+  title: string
+  description: string
+  date: string
+  level: string
+  status: string
+}
