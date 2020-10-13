@@ -1,9 +1,8 @@
 import React from 'react'
-import MobileHeader from '../../MobileHeader'
-import DesktopHeader from '../../DesktopHeader'
-import AdBanner from '../../AdBanner'
-import { Container } from '../styles'
-import MiddleColumn from './MiddleColumn'
+import LoadingProfilePanel from '../../../../Shimmer/LoadingProfilePanel'
+import ProfilePanelEdit from '../../../../ProfilePanelEdit'
+import { Container, Row } from './styles'
+
 export interface Props {
   isLoading: boolean
   me: {
@@ -47,19 +46,29 @@ export interface Props {
   }
 }
 
-const LayoutEditProfile: React.FC<Props> = ({ isLoading, me }) => {
+const MiddleColumn: React.FC<Props> = ({ isLoading, me }) => {
   return (
-    <Container>
-      <MobileHeader />
-      <DesktopHeader isLoading={isLoading} me={me} />
-
-      <span>{!isLoading && <AdBanner />}</span>
-
-      <main>
-        <MiddleColumn isLoading={isLoading} me={me} />
-      </main>
+    <Container className="middle-column">
+      {isLoading ? (
+        <>
+          <LoadingProfilePanel />
+        </>
+      ) : (
+        <Row className="actions">
+          <ProfilePanelEdit
+            name={me.name}
+            surname={me.surname}
+            company={me.company}
+            carrer_path={me.carrer_path}
+            job_situation={me.job_situation}
+            job_title={me.job_title}
+            presentation_letter={me.presentation_letter}
+            avatar={me.avatar}
+          />
+        </Row>
+      )}
     </Container>
   )
 }
 
-export default LayoutEditProfile
+export default MiddleColumn

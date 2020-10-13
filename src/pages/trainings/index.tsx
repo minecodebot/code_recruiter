@@ -1,56 +1,15 @@
 import React from 'react'
 import Head from 'next/head'
-import LayoutTrainings from '../../components/Layout/Trainings'
+import Layout from '../../components/Layout'
 import meData from '../../data/me/index.json'
 import trainingsData from '../../data/trainings/index.json'
 import { GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
+import { userInterface, trainingInterface } from '../../components/Interface'
 
 export interface Props {
-  me: {
-    name: string
-    surname: string
-    company: string
-    carrer_path: string
-    job_situation: string
-    job_title: string
-    presentation_letter: string
-    avatar: {
-      avatarStyle: string
-      topType: string
-      accessoriesType: string
-      hairColor: string
-      facialHairType: string
-      clotheType: string
-      eyeType: string
-      eyebrowType: string
-      mouthType: string
-      skinColor: string
-    }
-    competences: string[]
-    suggestedTrainings: {
-      id: number
-      title: string
-      level: string
-    }[]
-    completedTrainings: {
-      id: number
-      title: string
-      level: string
-    }[]
-    exams: {
-      title: string
-      description: string
-      date: string
-      level: string
-      status: string
-    }[]
-  }
-  trainings: {
-    id: number
-    title: string
-    level: string
-  }[]
+  me: userInterface
+  trainings: trainingInterface[]
 }
 
 const Trainings: React.FC<Props> = ({ me, trainings }) => {
@@ -61,7 +20,7 @@ const Trainings: React.FC<Props> = ({ me, trainings }) => {
       <Head>
         <title>Job Search Plataform - Trainings</title>
       </Head>
-      <LayoutTrainings isLoading={isFallback} me={me} trainings={trainings} />
+      <Layout isLoading={isFallback} me={me} trainings={trainings} />
     </>
   )
 }
@@ -73,6 +32,7 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       me: meData,
       trainings: trainingsData
-    }
+    },
+    revalidate: 20
   }
 }
