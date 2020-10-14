@@ -9,6 +9,7 @@ export const Container = styled.div`
     width: 100%;
     height: 54px;
     background: var(--color-background);
+    box-shadow: 0px -5px 0px 5px var(--color-background);
   }
   .profile-picture {
     width: 92px;
