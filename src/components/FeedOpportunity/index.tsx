@@ -105,7 +105,7 @@ const FeedOpportunity: React.FC<Props> = ({
             </div>
             <div className="right">
               <Button url={`/exam/code/${exam}`} type="exam" />
-              <Button url={`/training/code?id=${trainings}`} type="training" />
+              <Button url={`/trainings/code/${trainings.join('/')}`} type="training" />
             </div>
           </div>
         </Row>

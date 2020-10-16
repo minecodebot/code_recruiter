@@ -3,6 +3,7 @@ import HomeLeftColumn from './Home/LeftColumn'
 import HomeRightColumn from './Home/RightColumn'
 import ExamsMiddleColumn from './Exams/MiddleColumn'
 import TrainingsMiddleColumn from './Trainings/MiddleColumn'
+import TrainingsCodeMiddleColumn from './TrainingsCode/MiddleColumn'
 import ProfileMeMiddleColumn from './Profile/Me/MiddleColumn'
 import ProfileIdMiddleColumn from './Profile/Id/MiddleColumn'
 import ProfileEditMiddleColumn from './Profile/Edit/MiddleColumn'
@@ -40,6 +41,8 @@ const Layout: React.FC<Props> = ({ isLoading, me, trainings, posts, user }) => {
           <ExamsMiddleColumn me={me} />
         ) : router.pathname === '/trainings' ? (
           <TrainingsMiddleColumn me={me} trainings={trainings} />
+        ) : router.pathname.includes('/trainings/code') ? (
+          <TrainingsCodeMiddleColumn trainings={trainings} />
         ) : router.pathname === '/profile/me' ? (
           <ProfileMeMiddleColumn me={me} />
         ) : router.pathname === '/profile/edit' ? (
@@ -47,8 +50,8 @@ const Layout: React.FC<Props> = ({ isLoading, me, trainings, posts, user }) => {
         ) : router.pathname.includes('/profile/user/') ? (
           <ProfileIdMiddleColumn user={user} />
         ) : (
-          <></>
-        )}
+                        <></>
+                      )}
       </main>
     </Container>
   )
