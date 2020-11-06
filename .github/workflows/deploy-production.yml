@@ -32,7 +32,7 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: /code_recruiter
 
-      - run: touch ./next/.nojekyll
+      - run: touch ./.next/.nojekyll
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
@@ -41,4 +41,4 @@ jobs:
           user_email: "minecode.geral@gmail.com"
           personal_token: ${{ secrets.TOKEN }}
           publish_branch: gh-pages
-          publish_dir: ./next
+          publish_dir: ./.next
