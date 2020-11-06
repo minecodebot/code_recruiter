@@ -4,7 +4,6 @@ import {
   Container,
   Wrapper,
   LinkedInIcon,
-  ProfileCircle,
   TrainingIcon,
   ExamIcon
 } from './styles'

@@ -7,7 +7,6 @@ import TrainingsCodeMiddleColumn from './TrainingsCode/MiddleColumn'
 import ProfileMeMiddleColumn from './Profile/Me/MiddleColumn'
 import ProfileIdMiddleColumn from './Profile/Id/MiddleColumn'
 import ProfileEditMiddleColumn from './Profile/Edit/MiddleColumn'
-import MobileHeader from '../MobileHeader'
 import DesktopHeader from '../DesktopHeader'
 import AdBanner from '../AdBanner'
 import { Container } from './styles'
@@ -26,7 +25,6 @@ const Layout: React.FC<Props> = ({ isLoading, me, trainings, posts, user }) => {
   const router = useRouter()
   return (
     <Container>
-      <MobileHeader />
       <DesktopHeader me={me} />
 
       <span>{!isLoading && <AdBanner />}</span>
@@ -50,8 +48,8 @@ const Layout: React.FC<Props> = ({ isLoading, me, trainings, posts, user }) => {
         ) : router.pathname.includes('/profile/user/') ? (
           <ProfileIdMiddleColumn user={user} />
         ) : (
-                        <></>
-                      )}
+          <></>
+        )}
       </main>
     </Container>
   )

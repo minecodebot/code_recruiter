@@ -3,7 +3,10 @@ import { FcSupport } from 'react-icons/fc'
 
 export const Container = styled.div`
   /* height: 100vh; */
-  width: 100vh;
+  width: 100%;
+  @media (min-width: 1180px) {
+    width: 100vh;
+  }
 
   /* overflow-y: scroll;
 
@@ -41,7 +44,7 @@ export const Row = styled.div`
       }
 
       span {
-        display: none;
+        /* display: none; */
 
         @media (min-width: 1180px) {
           display: unset;
