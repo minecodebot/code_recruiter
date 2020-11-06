@@ -21,7 +21,7 @@ export default Home
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: [],
-    fallback: true
+    fallback: 'blocking'
   }
 }
 
@@ -29,7 +29,7 @@ export const getStaticProps: GetStaticProps = async context => {
   const { id } = context.params
   return {
     props: {
-      me: id,
+      id: id
     },
     revalidate: 20
   }

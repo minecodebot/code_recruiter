@@ -8,41 +8,41 @@ import { useRouter } from 'next/router'
 import { userInterface, trainingInterface } from '../../../components/Interface'
 
 export interface Props {
-    me: userInterface
-    trainings: trainingInterface[]
+  me: userInterface
+  trainings: trainingInterface[]
 }
 
 const Trainings: React.FC<Props> = ({ me, trainings }) => {
-    const { isFallback } = useRouter()
+  const { isFallback } = useRouter()
 
-    return (
-        <>
-            <Head>
-                <title>Job Search Plataform - Trainings</title>
-            </Head>
-            <Layout isLoading={isFallback} me={me} trainings={trainings} />
-        </>
-    )
+  return (
+    <>
+      <Head>
+        <title>Job Search Plataform - Trainings</title>
+      </Head>
+      <Layout isLoading={isFallback} me={me} trainings={trainings} />
+    </>
+  )
 }
 
 export default Trainings
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    return {
-        paths: [],
-        fallback: true
-    }
+  return {
+    paths: [],
+    fallback: 'blocking'
+  }
 }
 
 export const getStaticProps: GetStaticProps = async context => {
-    const { id } = context.params
-    return {
-        props: {
-            me: meData,
-            trainings: trainingsData.filter(training => {
-                return id.includes(training.id.toString())
-            })
-        },
-        revalidate: 20
-    }
+  const { id } = context.params
+  return {
+    props: {
+      me: meData,
+      trainings: trainingsData.filter(training => {
+        return id.includes(training.id.toString())
+      })
+    },
+    revalidate: 20
+  }
 }
