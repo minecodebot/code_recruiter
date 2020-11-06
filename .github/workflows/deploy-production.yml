@@ -32,6 +32,8 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: /code_recruiter
 
+      - run: touch ./next/.nojekyll
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
