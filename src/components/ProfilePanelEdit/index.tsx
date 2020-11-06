@@ -139,7 +139,6 @@ const ProfilePanelEdit: React.FC<Props> = ({
         style={customStyles}
       >
         {avatars.map(element => {
-          console.log(element)
           return (
             <button
               className="profile-picture"

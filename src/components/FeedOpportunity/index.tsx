@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Image from 'next/image'
 import Panel from '../Panel'
 import {
   Container,
@@ -38,7 +39,7 @@ const FeedOpportunity: React.FC<Props> = ({
     <Panel>
       <Container>
         <Row className="heading">
-          <Avatar src="https://i.imgur.com/81RtXfT.jpg" alt="Rocketseat" />
+          <Avatar src="/81RtXfT.jpg" alt="Rocketseat2" width="48" height="48" />
           <Column>
             <h3>{title}</h3>
             <h4>{company}</h4>
@@ -105,7 +106,10 @@ const FeedOpportunity: React.FC<Props> = ({
             </div>
             <div className="right">
               <Button url={`/exam/code/${exam}`} type="exam" />
-              <Button url={`/training/code?id=${trainings}`} type="training" />
+              <Button
+                url={`/trainings/code/${trainings.join('/')}`}
+                type="training"
+              />
             </div>
           </div>
         </Row>

@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import { Container } from '../../../styles/out/style'
+import { GetStaticPaths, GetStaticProps } from 'next'
 
 const Home: React.FC = () => {
   return (
@@ -16,3 +17,20 @@ const Home: React.FC = () => {
 }
 
 export default Home
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [],
+    fallback: 'blocking'
+  }
+}
+
+export const getStaticProps: GetStaticProps = async context => {
+  const { id } = context.params
+  return {
+    props: {
+      id: id
+    },
+    revalidate: 20
+  }
+}

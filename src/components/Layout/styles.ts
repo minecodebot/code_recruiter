@@ -22,9 +22,7 @@ export const Container = styled.div`
     }
   }
 
-  .left-column,
-  .right-column,
-  .ad-banner {
+  .right-column {
     display: none;
   }
 

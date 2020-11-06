@@ -16,7 +16,7 @@
     "English."
   ],
   "exam": 10,
-  "trainings": [121, 134]
+  "trainings": [1,3,5,7]
 }, {
   "title": "Software tester",
   "company": "Minecode",
@@ -32,7 +32,7 @@
     "Mocking Framework"
   ],
   "exam": 12,
-  "trainings": [165, 5213]
+  "trainings": [6,7,3,2]
 }, {
   "title": "Backend developer",
   "company": "Minecode",
@@ -54,7 +54,7 @@
     "Jira"
   ],
   "exam": 14,
-  "trainings": [156, 927]
+  "trainings": [13,5,12,1,9]
 }, {
   "title": "Cloud developer",
   "company": "Minecode",
@@ -73,7 +73,7 @@
     "English."
   ],
   "exam": 10,
-  "trainings": [121, 134]
+  "trainings": [1,3,5,7]
 }, {
   "title": "Frontend developer",
   "company": "Minecode",
@@ -92,7 +92,7 @@
     "English."
   ],
   "exam": 10,
-  "trainings": [121, 134]
+  "trainings": [1,3,5,7]
 }, {
   "title": "Software tester",
   "company": "Minecode",
@@ -108,7 +108,7 @@
     "Mocking Framework"
   ],
   "exam": 12,
-  "trainings": [165, 5213]
+  "trainings": [6,7,3,2]
 }, {
   "title": "Backend developer",
   "company": "Minecode",
@@ -130,7 +130,7 @@
     "Jira"
   ],
   "exam": 14,
-  "trainings": [156, 927]
+  "trainings": [13,5,12,1,9]
 }, {
   "title": "Cloud developer",
   "company": "Minecode",
@@ -149,5 +149,5 @@
     "English."
   ],
   "exam": 10,
-  "trainings": [121, 134]
+  "trainings": [1,3,5,7]
 }]

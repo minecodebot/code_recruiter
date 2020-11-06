@@ -1,26 +1,26 @@
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../../../components/Layout'
-import { GetStaticPaths, GetStaticProps } from 'next'
 import meData from '../../../data/me/index.json'
-import usersData from '../../../data/users/index.json'
+import trainingsData from '../../../data/trainings/index.json'
+import { GetStaticPaths, GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
-import { userInterface } from '../../../components/Interface'
+import { userInterface, trainingInterface } from '../../../components/Interface'
 
 export interface Props {
   me: userInterface
-  user: userInterface
+  trainings: trainingInterface[]
 }
 
-const Trainings: React.FC<Props> = ({ me, user }) => {
+const Trainings: React.FC<Props> = ({ me, trainings }) => {
   const { isFallback } = useRouter()
 
   return (
     <>
       <Head>
-        <title>Job Search Plataform - User Profile</title>
+        <title>Job Search Plataform - Trainings</title>
       </Head>
-      <Layout isLoading={isFallback} me={me} user={user} />
+      <Layout isLoading={isFallback} me={me} trainings={trainings} />
     </>
   )
 }
@@ -39,7 +39,9 @@ export const getStaticProps: GetStaticProps = async context => {
   return {
     props: {
       me: meData,
-      user: usersData.find(user => user.id.toString() === id)
+      trainings: trainingsData.filter(training => {
+        return id.includes(training.id.toString())
+      })
     },
     revalidate: 20
   }

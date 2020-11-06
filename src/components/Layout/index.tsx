@@ -3,10 +3,10 @@ import HomeLeftColumn from './Home/LeftColumn'
 import HomeRightColumn from './Home/RightColumn'
 import ExamsMiddleColumn from './Exams/MiddleColumn'
 import TrainingsMiddleColumn from './Trainings/MiddleColumn'
+import TrainingsCodeMiddleColumn from './TrainingsCode/MiddleColumn'
 import ProfileMeMiddleColumn from './Profile/Me/MiddleColumn'
 import ProfileIdMiddleColumn from './Profile/Id/MiddleColumn'
 import ProfileEditMiddleColumn from './Profile/Edit/MiddleColumn'
-import MobileHeader from '../MobileHeader'
 import DesktopHeader from '../DesktopHeader'
 import AdBanner from '../AdBanner'
 import { Container } from './styles'
@@ -25,7 +25,6 @@ const Layout: React.FC<Props> = ({ isLoading, me, trainings, posts, user }) => {
   const router = useRouter()
   return (
     <Container>
-      <MobileHeader />
       <DesktopHeader me={me} />
 
       <span>{!isLoading && <AdBanner />}</span>
@@ -40,6 +39,8 @@ const Layout: React.FC<Props> = ({ isLoading, me, trainings, posts, user }) => {
           <ExamsMiddleColumn me={me} />
         ) : router.pathname === '/trainings' ? (
           <TrainingsMiddleColumn me={me} trainings={trainings} />
+        ) : router.pathname.includes('/trainings/code') ? (
+          <TrainingsCodeMiddleColumn trainings={trainings} />
         ) : router.pathname === '/profile/me' ? (
           <ProfileMeMiddleColumn me={me} />
         ) : router.pathname === '/profile/edit' ? (

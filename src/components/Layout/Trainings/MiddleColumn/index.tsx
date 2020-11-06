@@ -20,13 +20,13 @@ const MiddleColumn: React.FC<Props> = ({ me, trainings }) => {
               <LoadingExamTrainingPanel />
             </>
           ) : (
-            <></>
-          )}
+              <></>
+            )}
           {trainings === undefined ? <LoadingExamTrainingPanel /> : <></>}
         </>
       ) : (
-        <></>
-      )}
+          <></>
+        )}
       {me !== undefined || trainings !== undefined ? (
         <Row className="actions">
           {me !== undefined ? (
@@ -41,17 +41,17 @@ const MiddleColumn: React.FC<Props> = ({ me, trainings }) => {
               />
             </>
           ) : (
-            <></>
-          )}
+              <></>
+            )}
           {trainings !== undefined ? (
             <TrainingPanel title="All" trainings={trainings} />
           ) : (
-            <></>
-          )}
+              <></>
+            )}
         </Row>
       ) : (
-        <></>
-      )}
+          <></>
+        )}
     </Container>
   )
 }

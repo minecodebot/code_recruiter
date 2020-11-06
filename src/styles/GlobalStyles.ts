@@ -139,7 +139,7 @@ export const Row = styled.div`
       }
 
       span {
-        display: none;
+        /* display: none; */
 
         @media (min-width: 1180px) {
           display: unset;

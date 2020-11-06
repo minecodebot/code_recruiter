@@ -8,6 +8,7 @@ import {
   FcSupport,
   FcTodoList
 } from 'react-icons/fc'
+import Image from 'next/image'
 
 export const Container = styled.div`
   margin-top: 8px;
@@ -114,7 +115,7 @@ export const Row = styled.div`
       }
 
       span {
-        display: none;
+        /* display: none; */
 
         @media (min-width: 1180px) {
           display: unset;
@@ -124,19 +125,13 @@ export const Row = styled.div`
   }
 `
 
-export const PostImage = styled.img`
-  width: 100%;
-`
-
 export const Separator = styled.div`
   width: 100%;
   height: 1px;
   border-top: 1px solid var(--color-separator);
 `
 
-export const Avatar = styled.img`
-  width: 48px;
-  height: 48px;
+export const Avatar = styled(Image)`
   border-radius: 50%;
   margin-right: 8px;
   object-fit: cover;

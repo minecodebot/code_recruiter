@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 import { FcPuzzle } from 'react-icons/fc'
 import { FcPositiveDynamic, FcSignature, FcPlus } from 'react-icons/fc'
+import Image from 'next/image'
 
 export const Container = styled.div`
   background: var(--color-header);
@@ -12,7 +13,7 @@ export const Container = styled.div`
   right: 0;
   z-index: 2;
 
-  display: none;
+  /* display: none; */
 
   @media (min-width: 1180px) {
     display: block;
@@ -72,13 +73,6 @@ export const LinkedInIcon = styled(FcPuzzle)`
   background-color: var(--color-header);
   border-radius: 4px;
   flex-shrink: 0;
-`
-
-export const ProfileCircle = styled.img`
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  border: 1px solid var(--color-icons);
 `
 
 const iconCSS = css`

@@ -25,26 +25,26 @@ const TrainingPanel: React.FC<Props> = ({ title, trainings }) => {
                       {title === 'Completed' ? (
                         <></>
                       ) : (
-                        <span className="subtext">{item.level}</span>
-                      )}
+                          <span className="subtext">{item.level}</span>
+                        )}
                     </Column>
                     <Column>
                       {title === 'Completed' ? (
                         <span className="subtext">{item.level}</span>
                       ) : (
-                        <Button
-                          type="training"
-                          url={`/training/code?id=${item.id}`}
-                        />
-                      )}
+                          <Button
+                            type="training"
+                            url={`/training/code/${item.id}`}
+                          />
+                        )}
                     </Column>
                   </Row>
                 </li>
               )
             })
           ) : (
-            <></>
-          )}
+              <></>
+            )}
         </ul>
       </Panel>
     </Container>
