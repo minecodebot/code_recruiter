@@ -31,7 +31,6 @@ export default Home
 export const getStaticProps: GetStaticProps = async () => {
 
   const postsData = await api.get("/jobs")
-  console.log(postsData.data)
 
   return {
     props: {
