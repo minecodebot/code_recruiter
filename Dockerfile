@@ -15,4 +15,4 @@ COPY . .
 
 EXPOSE 3000
 
-RUN yarn dev
+CMD "yarn" "dev"
