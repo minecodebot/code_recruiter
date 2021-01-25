@@ -19,21 +19,21 @@ const MiddleColumn: React.FC<Props> = ({ posts }) => {
           <LoadingFeedOpportunity />
         </>
       ) : (
-        posts.map(post => {
-          return (
-            <FeedOpportunity
-              title={post.title}
-              company={post.company}
-              post_date={post.post_date}
-              short_description={post.short_description}
-              long_description={post.long_description}
-              competences={post.competences}
-              exam={post.exam}
-              trainings={post.trainings}
-            />
-          )
-        })
-      )}
+          posts.map(post => {
+            return (
+              <FeedOpportunity
+                title={post.title}
+                company={post.company}
+                job_date={post.job_date}
+                short_description={post.short_description}
+                long_description={post.long_description}
+                competences={post.competences}
+                exam={post.exam}
+                trainings={post.trainings}
+              />
+            )
+          })
+        )}
     </Container>
   )
 }

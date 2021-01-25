@@ -16,7 +16,7 @@ import Button from '../Button'
 export interface Props {
   title: string
   company: string
-  post_date: string
+  job_date: string
   short_description: string
   long_description: string
   competences: string[]
@@ -27,7 +27,7 @@ export interface Props {
 const FeedOpportunity: React.FC<Props> = ({
   title,
   company,
-  post_date,
+  job_date,
   short_description,
   long_description,
   competences,
@@ -43,7 +43,7 @@ const FeedOpportunity: React.FC<Props> = ({
           <Column>
             <h3>{title}</h3>
             <h4>{company}</h4>
-            <time>{post_date}</time>
+            <time>{job_date}</time>
           </Column>
         </Row>
         <Row className="description">
@@ -69,11 +69,11 @@ const FeedOpportunity: React.FC<Props> = ({
                 </Row>
               </>
             ) : (
-              <>
-                <span className="title">Short Description</span>
-                <p>{short_description}</p>
-              </>
-            )}
+                <>
+                  <span className="title">Short Description</span>
+                  <p>{short_description}</p>
+                </>
+              )}
           </Column>
         </Row>
 
@@ -94,15 +94,15 @@ const FeedOpportunity: React.FC<Props> = ({
                   <span>View less</span>
                 </button>
               ) : (
-                <button
-                  onClick={() => {
-                    setFullOpportunity(!fullOpportunity)
-                  }}
-                >
-                  <LikeIcon />
-                  <span>View more</span>
-                </button>
-              )}
+                  <button
+                    onClick={() => {
+                      setFullOpportunity(!fullOpportunity)
+                    }}
+                  >
+                    <LikeIcon />
+                    <span>View more</span>
+                  </button>
+                )}
             </div>
             <div className="right">
               <Button url={`/exam/code/${exam}`} type="exam" />

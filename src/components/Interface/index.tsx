@@ -41,7 +41,7 @@ export interface userInterface {
 export interface postInterface {
   title: string
   company: string
-  post_date: string
+  job_date: string
   short_description: string
   long_description: string
   competences: string[]

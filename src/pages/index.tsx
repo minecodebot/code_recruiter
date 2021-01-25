@@ -2,10 +2,11 @@ import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/Layout'
 import meData from '../data/me/index.json'
-import postsData from '../data/posts/index.json'
+// import postsData from '../data/posts/index.json'
 import { GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
 import { userInterface, postInterface } from '../components/Interface'
+import api from '../services/api'
 
 export interface Props {
   me: userInterface
@@ -28,11 +29,15 @@ const Home: React.FC<Props> = ({ me, posts }) => {
 export default Home
 
 export const getStaticProps: GetStaticProps = async () => {
+
+  const postsData = await api.get("/jobs")
+
   return {
     props: {
       me: meData,
-      posts: postsData
+      posts: postsData.data
     },
     revalidate: 20
   }
 }
+
