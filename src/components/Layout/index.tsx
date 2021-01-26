@@ -15,7 +15,7 @@ import { userInterface, trainingInterface, postInterface } from '../Interface'
 
 export interface Props {
   isLoading: boolean
-  me: userInterface
+  me?: userInterface
   trainings?: trainingInterface[]
   posts?: postInterface[]
   user?: userInterface
@@ -46,7 +46,7 @@ const Layout: React.FC<Props> = ({ isLoading, me, trainings, posts, user }) => {
         ) : router.pathname === '/profile/edit' ? (
           <ProfileEditMiddleColumn me={me} />
         ) : router.pathname.includes('/profile/user/') ? (
-          <ProfileIdMiddleColumn user={user} />
+          <ProfileIdMiddleColumn user={user}/>
         ) : (
           <></>
         )}

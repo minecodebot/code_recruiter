@@ -13,10 +13,10 @@ export interface Props {
   name: string
   surname: string
   company: string
-  carrer_path: string
-  job_situation: string
-  job_title: string
-  presentation_letter: string
+  carrerPath: string
+  jobSituation: string
+  jobTitle: string
+  presentationLetter: string
   avatar: {
     avatarStyle: string
     topType: string
@@ -37,10 +37,10 @@ const ProfilePanel: React.FC<Props> = ({
   name,
   surname,
   company,
-  carrer_path,
-  job_situation,
-  job_title,
-  presentation_letter,
+  carrerPath,
+  jobSituation,
+  jobTitle,
+  presentationLetter,
   avatar,
   personalDataHidden,
   short
@@ -86,7 +86,7 @@ const ProfilePanel: React.FC<Props> = ({
           <></>
         ) : (
           <h2>
-            {job_title} @ {company}
+            {jobTitle} @ {company}
           </h2>
         )}
 
@@ -94,11 +94,11 @@ const ProfilePanel: React.FC<Props> = ({
 
         <div className="key-value">
           <span className="key">Carrer path</span>
-          <span className="value">{carrer_path}</span>
+          <span className="value">{carrerPath}</span>
         </div>
         <div className="key-value">
           <span className="key">Job Situation</span>
-          <span className="value">{job_situation}</span>
+          <span className="value">{jobSituation}</span>
         </div>
 
         <div className="separator"></div>
@@ -118,7 +118,7 @@ const ProfilePanel: React.FC<Props> = ({
               <></>
             ) : (
               <div className="key-value">
-                <span className="value">{presentation_letter}</span>
+                <span className="value">{presentationLetter}</span>
               </div>
             )}
           </>

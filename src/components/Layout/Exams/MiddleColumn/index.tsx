@@ -15,7 +15,7 @@ const MiddleColumn: React.FC<Props> = ({ me }) => {
         <LoadingExamTrainingPanel />
       ) : (
         <Row className="actions">
-          <ExamsPanel exams={me.exams} />
+          {me.exams.length > 0 ? <ExamsPanel exams={me.exams} /> : <></>}
         </Row>
       )}
     </Container>

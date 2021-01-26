@@ -3,9 +3,9 @@
   "name": "Cláudio",
   "surname": "Henriques",
   "company": "Minecode",
-  "carrer_path": "Software Engineer",
-  "job_situation": "Itensive searching",
-  "job_title": "Software Engineer",
+  "carrerPath": "Software Engineer",
+  "jobSituation": "Itensive searching",
+  "jobTitle": "Software Engineer",
   "avatar": {
     "avatarStyle": "Circle",
     "topType": "ShortHairDreads01",
@@ -103,5 +103,5 @@
       "status": "fail"
     }
   ],
-  "presentation_letter": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus justo at libero pharetra lobortis. Aenean tristique diam a blandit auctor. Vestibulum et purus mauris. Duis quis sapien sed urna vehicula elementum quis in mi. Cras molestie, libero tristique malesuada volutpat, nisi dolor luctus libero, ac fermentum sem ligula et nunc. In scelerisque urna et ex dignissim, eu iaculis est elementum. Maecenas luctus ante velit, a pretium dolor iaculis id. Vivamus congue lectus vitae volutpat laoreet. In tristique bibendum mauris, sed posuere dolor malesuada vitae. Suspendisse nec finibus mi, sit amet sagittis lorem. Fusce lorem tellus, fermentum sit amet lacinia vel, malesuada mattis turpis. Ut vulputate gravida nisi, eget consequat quam sagittis at. Sed in gravida ante.\nNulla rhoncus ante non libero pulvinar vestibulum. Pellentesque feugiat ex non nunc molestie molestie. Duis ornare sodales condimentum. Proin dolor augue, accumsan ut vestibulum ut, placerat quis magna. Nunc maximus lacus sit amet sollicitudin posuere. Integer lacus velit, gravida vel augue luctus, auctor semper diam. Vestibulum vestibulum massa lectus, at ultricies odio pulvinar a. Phasellus accumsan porttitor fermentum."
+  "presentationLetter": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus justo at libero pharetra lobortis. Aenean tristique diam a blandit auctor. Vestibulum et purus mauris. Duis quis sapien sed urna vehicula elementum quis in mi. Cras molestie, libero tristique malesuada volutpat, nisi dolor luctus libero, ac fermentum sem ligula et nunc. In scelerisque urna et ex dignissim, eu iaculis est elementum. Maecenas luctus ante velit, a pretium dolor iaculis id. Vivamus congue lectus vitae volutpat laoreet. In tristique bibendum mauris, sed posuere dolor malesuada vitae. Suspendisse nec finibus mi, sit amet sagittis lorem. Fusce lorem tellus, fermentum sit amet lacinia vel, malesuada mattis turpis. Ut vulputate gravida nisi, eget consequat quam sagittis at. Sed in gravida ante.\nNulla rhoncus ante non libero pulvinar vestibulum. Pellentesque feugiat ex non nunc molestie molestie. Duis ornare sodales condimentum. Proin dolor augue, accumsan ut vestibulum ut, placerat quis magna. Nunc maximus lacus sit amet sollicitudin posuere. Integer lacus velit, gravida vel augue luctus, auctor semper diam. Vestibulum vestibulum massa lectus, at ultricies odio pulvinar a. Phasellus accumsan porttitor fermentum."
 }

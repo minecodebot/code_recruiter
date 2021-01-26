@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/Layout'
-import meData from '../data/me/index.json'
+// import meData from '../data/me/index.json'
 // import postsData from '../data/posts/index.json'
 import { GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
@@ -31,13 +31,15 @@ export default Home
 export const getStaticProps: GetStaticProps = async () => {
 
   const postsData = await api.get("/jobs")
+  const meData = await api.get(`/users/${process.env.NEXT_PUBLIC_MYID}`)
 
   return {
     props: {
-      me: meData,
+      me: meData.data,
       posts: postsData.data
     },
     revalidate: 20
   }
 }
+
 

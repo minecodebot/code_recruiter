@@ -19,10 +19,10 @@ const MiddleColumn: React.FC<Props> = ({ me }) => {
             name={me.name}
             surname={me.surname}
             company={me.company}
-            carrer_path={me.carrer_path}
-            job_situation={me.job_situation}
-            job_title={me.job_title}
-            presentation_letter={me.presentation_letter}
+            carrerPath={me.carrerPath}
+            jobSituation={me.jobSituation}
+            jobTitle={me.jobTitle}
+            presentationLetter={me.presentationLetter}
             avatar={me.avatar}
           />
         </Row>

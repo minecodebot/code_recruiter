@@ -26,18 +26,18 @@ const MiddleColumn: React.FC<Props> = ({ user }) => {
             name={user.name}
             surname={user.surname}
             company={user.company}
-            carrer_path={user.carrer_path}
-            job_situation={user.job_situation}
-            job_title={user.job_title}
-            presentation_letter={user.presentation_letter}
+            carrerPath={user.carrerPath}
+            jobSituation={user.jobSituation}
+            jobTitle={user.jobTitle}
+            presentationLetter={user.presentationLetter}
             avatar={user.avatar}
             personalDataHidden={true}
           />
-          <SkillsPanel tags={user.competences} />
-          <TrainingPanel
+          {user.competences.length > 0 ? <SkillsPanel tags={user.competences} /> : <></>}
+          {user.completedTrainings.length > 0 ? <TrainingPanel
             title="Completed"
             trainings={user.completedTrainings}
-          />
+          /> : <></>}
         </Row>
       )}
     </Container>

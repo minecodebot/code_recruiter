@@ -1,11 +1,12 @@
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../../../components/Layout'
-import meData from '../../../data/me/index.json'
+// import meData from '../../../data/me/index.json'
 import trainingsData from '../../../data/trainings/index.json'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
 import { userInterface, trainingInterface } from '../../../components/Interface'
+import api from '../../../services/api'
 
 export interface Props {
   me: userInterface
@@ -35,10 +36,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async context => {
+
   const { id } = context.params
+  const meData = await api.get(`/users/${process.env.NEXT_PUBLIC_MYID}`)
+
   return {
     props: {
-      me: meData,
+      me: meData.data,
       trainings: trainingsData.filter(training => {
         return id.includes(training.id.toString())
       })

@@ -31,14 +31,14 @@ const MiddleColumn: React.FC<Props> = ({ me, trainings }) => {
         <Row className="actions">
           {me !== undefined ? (
             <>
-              <TrainingPanel
+              {me.completedTrainings.length > 0 ? <TrainingPanel
                 title="Completed"
                 trainings={me.completedTrainings}
-              />
-              <TrainingPanel
+              /> : <></>}
+              {me.suggestedTrainings.length > 0 ? <TrainingPanel
                 title="Suggested"
                 trainings={me.suggestedTrainings}
-              />
+              /> : <></>}
             </>
           ) : (
               <></>

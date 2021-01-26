@@ -29,15 +29,15 @@ const MiddleColumn: React.FC<Props> = ({ me }) => {
             name={me.name}
             surname={me.surname}
             company={me.company}
-            carrer_path={me.carrer_path}
-            job_situation={me.job_situation}
-            job_title={me.job_title}
-            presentation_letter={me.presentation_letter}
+            carrerPath={me.carrerPath}
+            jobSituation={me.jobSituation}
+            jobTitle={me.jobTitle}
+            presentationLetter={me.presentationLetter}
             avatar={me.avatar}
           />
-          <SkillsPanel tags={me.competences} />
-          <TrainingPanel title="Completed" trainings={me.completedTrainings} />
-          <TrainingPanel title="Suggested" trainings={me.suggestedTrainings} />
+          {me.competences.length > 0 ? <SkillsPanel tags={me.competences} /> : <></>}
+          {me.completedTrainings.length > 0 ? <TrainingPanel title="Completed" trainings={me.completedTrainings} /> : <></>}
+          {me.suggestedTrainings.length > 0 ? <TrainingPanel title="Suggested" trainings={me.suggestedTrainings} /> : <></>}
         </Row>
       )}
     </Container>

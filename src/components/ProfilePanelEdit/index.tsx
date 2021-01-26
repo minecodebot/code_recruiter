@@ -5,15 +5,16 @@ import { Container } from './styles'
 import Button from '../Button'
 import Avatar from 'avataaars'
 import Modal from 'react-modal'
+import api from '../../services/api'
 
 export interface Props {
   name: string
   surname: string
   company: string
-  carrer_path: string
-  job_situation: string
-  job_title: string
-  presentation_letter: string
+  carrerPath: string
+  jobSituation: string
+  jobTitle: string
+  presentationLetter: string
   avatar: {
     avatarStyle: string
     topType: string
@@ -32,20 +33,72 @@ const ProfilePanelEdit: React.FC<Props> = ({
   name,
   surname,
   company,
-  carrer_path,
-  job_situation,
-  job_title,
-  presentation_letter,
+  carrerPath,
+  jobSituation,
+  jobTitle,
+  presentationLetter,
   avatar
 }) => {
+
   const router = useRouter()
 
-  const handleSubmit = event => {
-    router.push('/profile/me')
-    event.preventDefault()
+  const [modalIsOpen, setIsOpen] = useState(false)
+  const [me, setMe] = useState({
+    name: name,
+    surname: surname,
+    jobTitle: jobTitle,
+    company: company,
+    carrerPath: carrerPath,
+    jobSituation: jobSituation,
+    presentationLetter: presentationLetter
+  });
+
+  const handleSubmit = async event => {
+    event.preventDefault();
+    const meData = { ...me}
+    await api.put(`/users/${process.env.NEXT_PUBLIC_MYID}`, {
+      avatar: {
+        avatarStyle: avatarStyle,
+        topType: topType,
+        accessoriesType: accessoriesType,
+        hairColor: hairColor,
+        facialHairType: facialHairType,
+        clotheType: clotheType,
+        eyeType: eyeType,
+        eyebrowType: eyebrowType,
+        mouthType: mouthType,
+        skinColor: skinColor
+      },
+      name: meData.name,
+      surname: meData.surname,
+      carrerPath: meData.carrerPath,
+      company: meData.company,
+      jobSituation: meData.jobSituation,
+      jobTitle: meData.jobTitle,
+      presentationLetter: meData.presentationLetter
+    }).then(response => {
+      console.log(response)
+      router.push('/profile/me')
+    }).catch(error => {
+      console.log(error)
+    })
   }
 
-  const [modalIsOpen, setIsOpen] = useState(false)
+  const handleChange = event => {
+    setMe({ ...me, [event.target.id]: event.target.value });
+  }
+
+  const [avatarStyle, setAvatarStyle] = useState(avatar.avatarStyle)
+  const [topType, setTopType] = useState(avatar.topType)
+  const [accessoriesType, setAccessoriesType] = useState(avatar.accessoriesType)
+  const [hairColor, setHairColor] = useState(avatar.hairColor)
+  const [facialHairType, setFacialHairType] = useState(avatar.facialHairType)
+  const [clotheType, setClotheType] = useState(avatar.clotheType)
+  const [eyeType, setEyeType] = useState(avatar.eyeType)
+  const [eyebrowType, setEyebrowType] = useState(avatar.eyebrowType)
+  const [mouthType, setMouthType] = useState(avatar.mouthType)
+  const [skinColor, setSkinColor] = useState(avatar.skinColor)
+
   const customStyles = {
     content: {
       backgroundColor: 'var(--color-medium)',
@@ -128,6 +181,7 @@ const ProfilePanelEdit: React.FC<Props> = ({
       skinColor: 'Tanned'
     }
   ]
+
   return (
     <Container>
       <Modal
@@ -144,6 +198,16 @@ const ProfilePanelEdit: React.FC<Props> = ({
               className="profile-picture"
               onClick={() => {
                 setIsOpen(false)
+                setAvatarStyle(element.avatarStyle)
+                setTopType(element.topType)
+                setAccessoriesType(element.accessoriesType)
+                setHairColor(element.hairColor)
+                setFacialHairType(element.facialHairType)
+                setClotheType(element.clotheType)
+                setEyeType(element.eyeType)
+                setEyebrowType(element.eyebrowType)
+                setMouthType(element.mouthType)
+                setSkinColor(element.skinColor)
               }}
             >
               <Avatar
@@ -173,16 +237,16 @@ const ProfilePanelEdit: React.FC<Props> = ({
             }}
           >
             <Avatar
-              avatarStyle={avatar.avatarStyle}
-              topType={avatar.topType}
-              accessoriesType={avatar.accessoriesType}
-              hairColor={avatar.hairColor}
-              facialHairType={avatar.facialHairType}
-              clotheType={avatar.clotheType}
-              eyeType={avatar.eyeType}
-              eyebrowType={avatar.eyebrowType}
-              mouthType={avatar.mouthType}
-              skinColor={avatar.skinColor}
+              avatarStyle={avatarStyle}
+              topType={topType}
+              accessoriesType={accessoriesType}
+              hairColor={hairColor}
+              facialHairType={facialHairType}
+              clotheType={clotheType}
+              eyeType={eyeType}
+              eyebrowType={eyebrowType}
+              mouthType={mouthType}
+              skinColor={skinColor}
             />
           </button>
           <div className="key-value">
@@ -194,6 +258,7 @@ const ProfilePanelEdit: React.FC<Props> = ({
               className="value"
               id="name"
               defaultValue={name}
+              onChange={handleChange}
             />
           </div>
 
@@ -206,6 +271,7 @@ const ProfilePanelEdit: React.FC<Props> = ({
               className="value"
               id="surname"
               defaultValue={surname}
+              onChange={handleChange}
             />
           </div>
 
@@ -217,7 +283,8 @@ const ProfilePanelEdit: React.FC<Props> = ({
               type="text"
               className="value"
               id="jobTitle"
-              defaultValue={job_title}
+              defaultValue={jobTitle}
+              onChange={handleChange}
             />
           </div>
 
@@ -230,6 +297,7 @@ const ProfilePanelEdit: React.FC<Props> = ({
               className="value"
               id="company"
               defaultValue={company}
+              onChange={handleChange}
             />
           </div>
 
@@ -239,19 +307,18 @@ const ProfilePanelEdit: React.FC<Props> = ({
             <label htmlFor="carrerPath" className="key">
               Carrer Path:
             </label>
-            <select id="carrerPath" className="value">
-              <option value="Frontend" selected={carrer_path === 'Frontend'}>
+            <select id="carrerPath" className="value" onChange={handleChange} defaultValue={me.carrerPath}>
+              <option value="Frontend">
                 Frontend
               </option>
-              <option value="Backend" selected={carrer_path === 'Backend'}>
+              <option value="Backend">
                 Backend
               </option>
-              <option value="Fullstack" selected={carrer_path === 'Fullstack'}>
+              <option value="Fullstack">
                 Fullstack
               </option>
               <option
                 value="Software Engineer"
-                selected={carrer_path === 'Software Engineer'}
               >
                 Software Engineer
               </option>
@@ -261,22 +328,19 @@ const ProfilePanelEdit: React.FC<Props> = ({
             <label htmlFor="jobSituation" className="key">
               Job Situation:
             </label>
-            <select id="jobSituation" className="value">
+            <select id="jobSituation" className="value" onChange={handleChange} defaultValue={me.jobSituation}>
               <option
                 value="Open to new opportunity"
-                selected={job_situation === 'Open to new opportunity'}
               >
                 Open to new opportunity
               </option>
               <option
                 value="Itensive searching"
-                selected={job_situation === 'Itensive searching'}
               >
                 Itensive searching
               </option>
               <option
                 value="Not available to new opportunity"
-                selected={job_situation === 'Not available to new opportunity'}
               >
                 Not available to new opportunity
               </option>
@@ -293,12 +357,13 @@ const ProfilePanelEdit: React.FC<Props> = ({
           <div className="key-value">
             <textarea
               className="value value-all"
-              id="selftPresentationLetter"
-              defaultValue={presentation_letter}
+              id="presentationLetter"
+              defaultValue={presentationLetter}
+              onChange={handleChange}
             />
           </div>
         </Panel>
-        <button type="submit">
+        <button type="button">
           <Button type="save" />
         </button>
       </form>

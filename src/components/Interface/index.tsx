@@ -2,10 +2,10 @@ export interface userInterface {
   name: string
   surname: string
   company: string
-  carrer_path: string
-  job_situation: string
-  job_title: string
-  presentation_letter: string
+  carrerPath: string
+  jobSituation: string
+  jobTitle: string
+  presentationLetter: string
   avatar: {
     avatarStyle: string
     topType: string
